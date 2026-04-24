@@ -163,6 +163,15 @@ button.ghost {
   gap: 8px;
 }
 
+.chat-main {
+  margin-top: 8px;
+  margin-bottom: 14px;
+}
+
+.edit-kicker {
+  margin-top: 8px;
+}
+
 .form-grid {
   margin-top: 10px;
   display: grid;
@@ -225,8 +234,8 @@ button.ghost {
 .chat-history {
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 12px;
-  min-height: 150px;
-  max-height: 240px;
+  min-height: 300px;
+  max-height: 430px;
   overflow: auto;
   padding: 10px;
   display: grid;

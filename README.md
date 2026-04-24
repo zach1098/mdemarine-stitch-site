@@ -6,6 +6,7 @@ Static marketing site with an owner console for fast content control.
 
 - `index.html` + service pages (`engine-services.html`, `marine-fabrication.html`, `parts-sales.html`)
 - `owner.html` owner console (login, content/theme editor, live preview, publish + rollback, chat panel)
+- `api/site-agent.js` Vercel serverless endpoint for chat-driven site edits
 - `site-config.js` default schema
 - `site.js` runtime config loader + binder
 - `styles.css` public site styles
@@ -28,6 +29,17 @@ From the owner console you can:
 - publish to live state
 - rollback to previous publishes
 - use the chat panel UI (set `chat.endpoint` to connect backend)
+
+Default chat endpoint is now `/api/site-agent`.
+
+### Connect chat to AI (Vercel)
+
+Set these env vars in Vercel project settings:
+
+- `OPENAI_API_KEY` (required)
+- `OPENAI_MODEL` (optional, default `gpt-4o-mini`)
+
+Then redeploy. The owner chat can propose and apply structured draft edits directly.
 
 > This is client-side only. Move auth + publish storage server-side before production.
 

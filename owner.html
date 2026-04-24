@@ -36,11 +36,21 @@
           <article class="panel editor-panel">
             <div class="panel-head">
               <div>
-                <div class="kicker">Theme + Content</div>
-                <h2>Editable schema</h2>
+                <div class="kicker">Website Agent</div>
+                <h2>Chat-first control center</h2>
               </div>
               <button id="resetBtn" class="ghost">Reset draft</button>
             </div>
+
+            <div class="chat-main">
+              <div id="chatHistory" class="chat-history"></div>
+              <div class="chat-controls">
+                <input id="chatInput" type="text" placeholder="Tell me what to change on the website..." />
+                <button id="chatSendBtn" class="primary">Send</button>
+              </div>
+            </div>
+
+            <div class="kicker edit-kicker">Advanced editor</div>
 
             <div id="formContainer" class="form-grid"></div>
 
@@ -68,14 +78,6 @@
               <button id="rollbackBtn" class="ghost">Rollback to selected</button>
             </div>
 
-            <div class="side-block">
-              <div class="kicker">Chat panel</div>
-              <div id="chatHistory" class="chat-history"></div>
-              <div class="chat-controls">
-                <input id="chatInput" type="text" placeholder="Ask the assistant..." />
-                <button id="chatSendBtn" class="primary">Send</button>
-              </div>
-            </div>
           </aside>
         </div>
       </section>

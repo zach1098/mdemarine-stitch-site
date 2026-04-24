@@ -5,7 +5,7 @@
       ownerPassword: "mde-owner-2026"
     },
     chat: {
-      endpoint: ""
+      endpoint: "/api/site-agent"
     },
     brand: {
       name: "MDEmarine"

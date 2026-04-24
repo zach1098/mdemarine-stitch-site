@@ -4,6 +4,7 @@
 
   var defaults = site.getDefaults();
   var keys = site.keys;
+  var CHAT_HISTORY_KEY = "mde_owner_chat_history_v1";
 
   var loginPanel = document.getElementById("loginPanel");
   var appPanel = document.getElementById("appPanel");
@@ -32,13 +33,16 @@
   var published = mergeAll(defaults, site.loadJson(keys.published) || {});
   var draft = mergeAll(defaults, site.loadJson(keys.published) || {}, site.loadJson(keys.draft) || {});
   var versions = site.loadJson(keys.versions) || [];
+  var convo = loadConvo();
+
+  var sending = false;
 
   var fields = [
     { path: "brand.name", label: "Brand Name", type: "text" },
     { path: "contact.phone", label: "Contact Phone", type: "text" },
     { path: "contact.email", label: "Contact Email", type: "text" },
     { path: "contact.serviceArea", label: "Service Area", type: "text" },
-    { path: "chat.endpoint", label: "Chat Endpoint (optional)", type: "text", full: true },
+    { path: "chat.endpoint", label: "Chat Endpoint", type: "text", full: true },
 
     { path: "seo.title", label: "SEO Title", type: "text", full: true },
     { path: "seo.description", label: "SEO Description", type: "textarea", full: true },
@@ -293,44 +297,123 @@
     setStatus("Draft reset to current published state.", true);
   }
 
-  function appendBubble(role, text) {
+  function loadConvo() {
+    try {
+      var parsed = JSON.parse(localStorage.getItem(CHAT_HISTORY_KEY) || "[]");
+      return Array.isArray(parsed) ? parsed : [];
+    } catch (error) {
+      return [];
+    }
+  }
+
+  function saveConvo() {
+    localStorage.setItem(CHAT_HISTORY_KEY, JSON.stringify(convo.slice(-80)));
+  }
+
+  function appendBubble(role, text, persist) {
+    if (!chatHistory) return;
     var bubble = document.createElement("div");
-    bubble.className = "bubble " + role;
-    bubble.textContent = text;
+    bubble.className = "bubble " + (role === "user" ? "user" : "bot");
+    bubble.textContent = String(text || "");
     chatHistory.appendChild(bubble);
     chatHistory.scrollTop = chatHistory.scrollHeight;
+
+    if (persist) {
+      convo.push({ role: role === "user" ? "user" : "assistant", content: String(text || ""), at: Date.now() });
+      saveConvo();
+    }
+  }
+
+  function renderConvo() {
+    if (!chatHistory) return;
+    chatHistory.innerHTML = "";
+
+    convo.forEach(function (entry) {
+      appendBubble(entry.role === "user" ? "user" : "bot", entry.content || "", false);
+    });
+
+    if (!convo.length) {
+      appendBubble(
+        "bot",
+        "I’m connected to your website draft. Tell me what to change, like: ‘rewrite the hero for yacht owners’ or ‘make the colors darker and update contact info.’",
+        true
+      );
+    }
+  }
+
+  function getChatEndpoint() {
+    var endpoint = getByPath(draft, "chat.endpoint");
+    if (typeof endpoint !== "string" || !endpoint.trim()) return "/api/site-agent";
+    return endpoint.trim();
+  }
+
+  function applyChanges(changes) {
+    if (!Array.isArray(changes) || !changes.length) return 0;
+
+    var applied = 0;
+    changes.forEach(function (change) {
+      if (!change || typeof change.path !== "string") return;
+      setByPath(draft, change.path, change.value);
+      applied += 1;
+    });
+
+    if (applied) {
+      saveDraft();
+      renderForm();
+      reloadPreview();
+    }
+
+    return applied;
   }
 
   async function sendChat() {
+    if (sending) return;
     var message = (chatInput.value || "").trim();
     if (!message) return;
+
     chatInput.value = "";
-    appendBubble("user", message);
+    appendBubble("user", message, true);
 
-    var endpoint = getByPath(draft, "chat.endpoint") || "";
+    var endpoint = getChatEndpoint();
 
-    if (!endpoint) {
-      appendBubble("bot", "Chat UI is wired. Add a chat endpoint URL to connect this to your backend agent route.");
-      return;
-    }
+    sending = true;
+    chatSendBtn.disabled = true;
+    setStatus("Thinking...", false);
 
     try {
       var response = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: message })
+        body: JSON.stringify({
+          message: message,
+          draft: draft,
+          published: published,
+          history: convo.slice(-14)
+        })
       });
 
       if (!response.ok) {
-        appendBubble("bot", "Endpoint returned " + response.status + ".");
+        appendBubble("bot", "Endpoint returned " + response.status + ".", true);
+        setStatus("Chat call failed.", false);
         return;
       }
 
       var data = await response.json();
-      var reply = data.reply || data.message || JSON.stringify(data);
-      appendBubble("bot", String(reply));
+      var reply = data.reply || data.message || "Done.";
+      appendBubble("bot", String(reply), true);
+
+      var applied = applyChanges(data.changes || []);
+      if (applied > 0) {
+        setStatus("Applied " + applied + " change" + (applied === 1 ? "" : "s") + " to draft.", true);
+      } else {
+        setStatus("No draft changes applied.", true);
+      }
     } catch (error) {
-      appendBubble("bot", "Could not reach chat endpoint.");
+      appendBubble("bot", "Could not reach the chat endpoint.", true);
+      setStatus("Chat endpoint unreachable.", false);
+    } finally {
+      sending = false;
+      chatSendBtn.disabled = false;
     }
   }
 
@@ -340,8 +423,8 @@
     appPanel.classList.remove("hidden");
     logoutBtn.classList.remove("hidden");
     renderForm();
+    renderConvo();
     reloadPreview();
-    appendBubble("bot", "Console ready. Draft changes stay local until you publish.");
   }
 
   function lock() {
@@ -350,7 +433,6 @@
     appPanel.classList.add("hidden");
     logoutBtn.classList.add("hidden");
     passwordInput.value = "";
-    chatHistory.innerHTML = "";
   }
 
   function init() {
@@ -399,6 +481,7 @@
         draft = mergeAll(defaults, parsed);
         saveDraft();
         renderForm();
+        reloadPreview();
         setStatus("Raw schema applied to draft.", true);
       } catch (error) {
         setStatus("Raw JSON invalid. Fix before applying.");
