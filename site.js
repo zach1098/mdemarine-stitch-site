@@ -113,6 +113,57 @@
     });
   }
 
+  function upsertMeta(selector, attribute, value) {
+    if (!value) return;
+    var el = document.querySelector(selector);
+    if (!el) return;
+    el.setAttribute(attribute, String(value));
+  }
+
+  function applySeo(config) {
+    var seo = config.seo || {};
+    var brandName = getByPath(config, "brand.name") || "MDEmarine";
+    var title = seo.title || document.title || brandName;
+    var description = seo.description || "Marine engine support and fabrication.";
+    var canonicalUrl = seo.canonicalUrl || window.location.href;
+    var ogImage = seo.ogImage || "";
+    var keywords = seo.keywords || "";
+
+    document.title = title;
+    upsertMeta('meta[name="description"]', "content", description);
+    upsertMeta('meta[name="keywords"]', "content", keywords);
+    upsertMeta('meta[property="og:title"]', "content", title);
+    upsertMeta('meta[property="og:description"]', "content", description);
+    upsertMeta('meta[property="og:url"]', "content", canonicalUrl);
+    upsertMeta('meta[property="og:image"]', "content", ogImage);
+    upsertMeta('meta[name="twitter:title"]', "content", title);
+    upsertMeta('meta[name="twitter:description"]', "content", description);
+    upsertMeta('meta[name="twitter:image"]', "content", ogImage);
+
+    var canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.setAttribute("href", canonicalUrl);
+
+    var ld = document.getElementById("site-jsonld");
+    if (ld) {
+      ld.textContent = JSON.stringify(
+        {
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: brandName,
+          description: description,
+          url: canonicalUrl,
+          telephone: getByPath(config, "contact.phone") || undefined,
+          email: getByPath(config, "contact.email") || undefined,
+          areaServed: getByPath(config, "contact.serviceArea") || undefined,
+          image: ogImage || undefined,
+          serviceType: ["Marine Engine Support", "Marine Fabrication", "Parts Sourcing"]
+        },
+        null,
+        2
+      );
+    }
+  }
+
   function loadActiveConfig() {
     var defaults = window.MDE_DEFAULT_CONFIG || {};
     var active = clone(defaults);
@@ -130,6 +181,7 @@
 
   var config = loadActiveConfig();
   applyTheme(config.theme || {});
+  applySeo(config);
   bindText(config);
   bindLinks(config);
 

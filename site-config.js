@@ -10,6 +10,15 @@
     brand: {
       name: "MDEmarine"
     },
+    seo: {
+      title: "MDEmarine | Marine Engine Support, Fabrication, and Parts",
+      description:
+        "Marine engine support, repower planning, fabrication, and parts sourcing for engine change-outs, troubleshooting, and project execution.",
+      keywords:
+        "marine engine support, repower planning, marine fabrication, marine engine parts, engine change out, marine diagnostics",
+      canonicalUrl: "https://mdemarine-stitch-site.vercel.app/",
+      ogImage: "https://mdemarine-stitch-site.vercel.app/assets/projects/team-john-deere-engine.png"
+    },
     theme: {
       bg: "#eef2f5",
       panel: "#ffffff",

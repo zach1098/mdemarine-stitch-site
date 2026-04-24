@@ -23,6 +23,7 @@
   var rollbackBtn = document.getElementById("rollbackBtn");
   var versionSelect = document.getElementById("versionSelect");
   var resetBtn = document.getElementById("resetBtn");
+  var openPreviewBtn = document.getElementById("openPreviewBtn");
 
   var chatHistory = document.getElementById("chatHistory");
   var chatInput = document.getElementById("chatInput");
@@ -38,6 +39,12 @@
     { path: "contact.email", label: "Contact Email", type: "text" },
     { path: "contact.serviceArea", label: "Service Area", type: "text" },
     { path: "chat.endpoint", label: "Chat Endpoint (optional)", type: "text", full: true },
+
+    { path: "seo.title", label: "SEO Title", type: "text", full: true },
+    { path: "seo.description", label: "SEO Description", type: "textarea", full: true },
+    { path: "seo.keywords", label: "SEO Keywords", type: "textarea", full: true },
+    { path: "seo.canonicalUrl", label: "Canonical URL", type: "text", full: true },
+    { path: "seo.ogImage", label: "SEO / Social Image URL", type: "image", full: true },
 
     { path: "theme.bg", label: "Theme Background", type: "color" },
     { path: "theme.navy", label: "Theme Navy", type: "color" },
@@ -374,6 +381,13 @@
       reloadPreview();
       setStatus("Preview refreshed.", true);
     });
+
+    if (openPreviewBtn) {
+      openPreviewBtn.addEventListener("click", function () {
+        saveDraft();
+        window.open("./index.html?preview=1&t=" + Date.now(), "_blank");
+      });
+    }
 
     publishBtn.addEventListener("click", doPublish);
     rollbackBtn.addEventListener("click", rollbackSelected);
