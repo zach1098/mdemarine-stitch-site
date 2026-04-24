@@ -36,8 +36,12 @@ Default chat endpoint is now `/api/site-agent`.
 
 Set these env vars in Vercel project settings:
 
-- `OPENAI_API_KEY` (required)
-- `OPENAI_MODEL` (optional, default `gpt-4o-mini`)
+- Preferred direct-to-Prometheus mode:
+  - `PROMETHEUS_HOOK_URL`
+  - `PROMETHEUS_HOOK_TOKEN`
+- Optional fallback model mode:
+  - `OPENAI_API_KEY`
+  - `OPENAI_MODEL` (default `gpt-4o-mini`)
 
 Then redeploy. The owner chat can propose and apply structured draft edits directly.
 

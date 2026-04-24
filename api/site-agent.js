@@ -1,5 +1,7 @@
 const OPENAI_URL = "https://api.openai.com/v1/chat/completions";
 const DEFAULT_MODEL = process.env.OPENAI_MODEL || "gpt-4o-mini";
+const PROMETHEUS_HOOK_URL = process.env.PROMETHEUS_HOOK_URL || "";
+const PROMETHEUS_HOOK_TOKEN = process.env.PROMETHEUS_HOOK_TOKEN || "";
 
 const RESPONSE_SCHEMA = {
   type: "object",
@@ -61,6 +63,71 @@ function sanitizeChanges(changes) {
     .map((item) => ({ path: item.path, value: item.value }));
 }
 
+async function callPrometheusHook(payload) {
+  if (!PROMETHEUS_HOOK_URL || !PROMETHEUS_HOOK_TOKEN) return null;
+
+  const response = await fetch(PROMETHEUS_HOOK_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${PROMETHEUS_HOOK_TOKEN}`
+    },
+    body: JSON.stringify(payload)
+  });
+
+  const rawText = await response.text();
+  let parsed;
+
+  try {
+    parsed = rawText ? JSON.parse(rawText) : {};
+  } catch (error) {
+    parsed = { raw: rawText };
+  }
+
+  if (!response.ok) {
+    return {
+      reply: `Prometheus hook error (${response.status}).`,
+      changes: [],
+      debug: parsed
+    };
+  }
+
+  if (parsed && typeof parsed.reply === "string") {
+    return {
+      reply: parsed.reply,
+      changes: sanitizeChanges(parsed.changes)
+    };
+  }
+
+  if (parsed && parsed.result && typeof parsed.result.reply === "string") {
+    return {
+      reply: parsed.result.reply,
+      changes: sanitizeChanges(parsed.result.changes)
+    };
+  }
+
+  if (parsed && parsed.result && typeof parsed.result.output === "string") {
+    try {
+      const json = JSON.parse(parsed.result.output);
+      return {
+        reply: json.reply || "Updated.",
+        changes: sanitizeChanges(json.changes)
+      };
+    } catch (error) {
+      return {
+        reply: parsed.result.output,
+        changes: []
+      };
+    }
+  }
+
+  return {
+    reply: "Prometheus hook responded, but not in the expected shape yet.",
+    changes: [],
+    debug: parsed
+  };
+}
+
 module.exports = async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
@@ -75,10 +142,47 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ reply: "Say what you want changed.", changes: [] });
   }
 
+  const prompt = [
+    "You are Prometheus, acting as the dedicated website agent for the MDEmarine owner console.",
+    "Reply ONLY as JSON with this shape: {\"reply\": string, \"changes\": [{\"path\": string, \"value\": any}] }.",
+    "Only edit these roots: brand, seo, theme, contact, home, chat.endpoint.",
+    "Be concise in reply text.",
+    "Current site draft JSON:",
+    JSON.stringify(draft, null, 2),
+    "",
+    "Recent conversation:",
+    JSON.stringify(history.slice(-14), null, 2),
+    "",
+    "Latest owner request:",
+    message
+  ].join("\n");
+
+  if (PROMETHEUS_HOOK_URL && PROMETHEUS_HOOK_TOKEN) {
+    try {
+      const relay = await callPrometheusHook({
+        message: prompt,
+        agentId: "main",
+        wakeMode: "now",
+        timeoutSeconds: 60,
+        deliver: false,
+        sessionKey: "hook:mdemarine-admin"
+      });
+
+      if (relay) {
+        return res.status(200).json(relay);
+      }
+    } catch (error) {
+      return res.status(200).json({
+        reply: "Prometheus relay is configured, but the hook call failed.",
+        changes: []
+      });
+    }
+  }
+
   if (!process.env.OPENAI_API_KEY) {
     return res.status(200).json({
       reply:
-        "Chat backend is wired, but OPENAI_API_KEY is missing in Vercel env vars. Add it, redeploy, and I’ll start making edits from chat.",
+        "Prometheus-first relay is wired, but PROMETHEUS_HOOK_URL and PROMETHEUS_HOOK_TOKEN are not set. If you want fallback mode instead, add OPENAI_API_KEY.",
       changes: []
     });
   }
@@ -150,4 +254,3 @@ module.exports = async function handler(req, res) {
     });
   }
 };
-
