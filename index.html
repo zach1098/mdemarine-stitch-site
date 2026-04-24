@@ -20,7 +20,7 @@
     <div class="site-shell">
       <header class="nav">
         <div class="nav-inner">
-          <a class="brand" href="./index.html">MDEmarine</a>
+          <a class="brand" href="./index.html" data-bind="brand.name">MDEmarine</a>
           <nav class="nav-links">
             <a class="active" href="./index.html">Home</a>
             <a href="./engine-services.html">Engine Services</a>
@@ -35,9 +35,9 @@
       <section class="hero">
         <div class="hero-grid">
           <div class="hero-copy">
-            <div class="eyebrow">Marine Engine Support</div>
-            <h1>Engine change-outs, diagnostics, fabrication, and project support</h1>
-            <p>
+            <div class="eyebrow" data-bind="home.eyebrow">Marine Engine Support</div>
+            <h1 data-bind="home.headline">Engine change-outs, diagnostics, fabrication, and project support</h1>
+            <p data-bind="home.subhead">
               Marine engine support, fabrication, and parts sourcing for owners, captains, and yards that need a cleaner path from first inquiry to real project scope.
             </p>
             <div class="hero-actions">
@@ -48,16 +48,16 @@
 
           <div class="hero-panel">
             <div class="info-card">
-              <div class="info-label">Best Fit</div>
-              <div class="info-value">Repower Planning</div>
+              <div class="info-label" data-bind="home.stats.0.label">Best Fit</div>
+              <div class="info-value" data-bind="home.stats.0.value">Repower Planning</div>
             </div>
             <div class="info-card">
-              <div class="info-label">Problem Calls</div>
-              <div class="info-value">Heat, Smoke, Vibration</div>
+              <div class="info-label" data-bind="home.stats.1.label">Problem Calls</div>
+              <div class="info-value" data-bind="home.stats.1.value">Heat, Smoke, Vibration</div>
             </div>
             <div class="info-card">
-              <div class="info-label">Project Scope</div>
-              <div class="info-value">Dockside and Yard Work</div>
+              <div class="info-label" data-bind="home.stats.2.label">Project Scope</div>
+              <div class="info-value" data-bind="home.stats.2.value">Dockside and Yard Work</div>
             </div>
           </div>
         </div>
@@ -75,50 +75,50 @@
 
           <div class="grid grid-3">
             <article class="service-card">
-              <div class="card-kicker">01</div>
-              <h3 class="card-title">Engine services</h3>
-              <p class="card-copy">
+              <div class="card-kicker" data-bind="home.services.0.kicker">01</div>
+              <h3 class="card-title" data-bind="home.services.0.title">Engine services</h3>
+              <p class="card-copy" data-bind="home.services.0.copy">
                 Engine change-outs, repower planning, troubleshooting, and mechanical support for projects that need more than generic boilerplate.
               </p>
-              <ul class="card-list">
+              <ul class="card-list" data-bind-list="home.services.0.list">
                 <li>Change-out planning and removal scope</li>
                 <li>Overheat, no-start, smoke, and vibration diagnosis</li>
                 <li>Job scoping before the yard clock starts burning</li>
               </ul>
               <div class="inline-actions">
-                <a class="btn" href="./engine-services.html">Open page</a>
+                <a class="btn" data-bind-href="home.services.0.href" href="./engine-services.html">Open page</a>
               </div>
             </article>
 
             <article class="service-card">
-              <div class="card-kicker">02</div>
-              <h3 class="card-title">Marine fabrication</h3>
-              <p class="card-copy">
+              <div class="card-kicker" data-bind="home.services.1.kicker">02</div>
+              <h3 class="card-title" data-bind="home.services.1.title">Marine fabrication</h3>
+              <p class="card-copy" data-bind="home.services.1.copy">
                 Fabrication support for mounts, brackets, polished tubing, install cleanup, and the small metalwork jobs that always appear once a project opens up.
               </p>
-              <ul class="card-list">
+              <ul class="card-list" data-bind-list="home.services.1.list">
                 <li>Mounts, brackets, trays, and repair parts</li>
                 <li>Aluminum and stainless detail work</li>
                 <li>Real project photo gallery from the export</li>
               </ul>
               <div class="inline-actions">
-                <a class="btn" href="./marine-fabrication.html">Open page</a>
+                <a class="btn" data-bind-href="home.services.1.href" href="./marine-fabrication.html">Open page</a>
               </div>
             </article>
 
             <article class="service-card dark">
-              <div class="card-kicker">03</div>
-              <h3 class="card-title">Parts and sales</h3>
-              <p class="card-copy">
+              <div class="card-kicker" data-bind="home.services.2.kicker">03</div>
+              <h3 class="card-title" data-bind="home.services.2.title">Parts and sales</h3>
+              <p class="card-copy" data-bind="home.services.2.copy">
                 Parts sourcing and repair planning language that helps people explain what they need before they waste money ordering the wrong thing.
               </p>
-              <ul class="card-list">
+              <ul class="card-list" data-bind-list="home.services.2.list">
                 <li>Identify the failed part first</li>
                 <li>Separate urgent needs from planned work</li>
                 <li>Capture engine model, serial, and photos up front</li>
               </ul>
               <div class="inline-actions">
-                <a class="btn" href="./parts-sales.html">Open page</a>
+                <a class="btn" data-bind-href="home.services.2.href" href="./parts-sales.html">Open page</a>
               </div>
             </article>
           </div>
@@ -147,34 +147,34 @@
       <section class="page-section muted-block">
         <div class="container">
           <div class="section-intro">
-            <div class="section-kicker">Project gallery</div>
-            <h2 class="section-title">Real photos from the missing export</h2>
-            <p class="section-copy">
+            <div class="section-kicker" data-bind="home.gallery.kicker">Project gallery</div>
+            <h2 class="section-title" data-bind="home.gallery.title">Real photos from the missing export</h2>
+            <p class="section-copy" data-bind="home.gallery.copy">
               Real project imagery helps the site feel grounded and gives the fabrication and engine sections something specific to show.
             </p>
           </div>
 
           <div class="media-grid">
             <article class="gallery-card tall">
-              <img src="./assets/projects/team-john-deere-engine.png" alt="Team standing beside a John Deere marine engine" />
+              <img data-bind="home.gallery.items.0.image" src="./assets/projects/team-john-deere-engine.png" alt="Team standing beside a John Deere marine engine" />
               <div class="gallery-copy">
-                <h3>Shop and project credibility</h3>
-                <p>Use this kind of image when you want the site to feel like an actual operation instead of a mockup.</p>
+                <h3 data-bind="home.gallery.items.0.title">Shop and project credibility</h3>
+                <p data-bind="home.gallery.items.0.copy">Use this kind of image when you want the site to feel like an actual operation instead of a mockup.</p>
               </div>
             </article>
             <div class="gallery-stack">
               <article class="gallery-card">
-                <img src="./assets/projects/fabrication-weld-detail.png" alt="Close-up of polished marine fabrication weld detail" />
+                <img data-bind="home.gallery.items.1.image" src="./assets/projects/fabrication-weld-detail.png" alt="Close-up of polished marine fabrication weld detail" />
                 <div class="gallery-copy">
-                  <h3>Fabrication detail</h3>
-                  <p>Polished tubing and weld work that looks like real shop output, because it is.</p>
+                  <h3 data-bind="home.gallery.items.1.title">Fabrication detail</h3>
+                  <p data-bind="home.gallery.items.1.copy">Polished tubing and weld work that looks like real shop output, because it is.</p>
                 </div>
               </article>
               <article class="gallery-card">
-                <img src="./assets/projects/engine-install-detail.png" alt="Marine engine install detail with hoses and fittings" />
+                <img data-bind="home.gallery.items.2.image" src="./assets/projects/engine-install-detail.png" alt="Marine engine install detail with hoses and fittings" />
                 <div class="gallery-copy">
-                  <h3>Mechanical install</h3>
-                  <p>Engine room close-up that fits the engine services page better than another AI hero image.</p>
+                  <h3 data-bind="home.gallery.items.2.title">Mechanical install</h3>
+                  <p data-bind="home.gallery.items.2.copy">Engine room close-up that fits the engine services page better than another AI hero image.</p>
                 </div>
               </article>
             </div>
@@ -185,16 +185,16 @@
       <section id="request" class="page-section">
         <div class="container request-grid">
           <article class="copy-card">
-            <div class="section-kicker">Request checklist</div>
-            <h2 class="section-title">What to send before asking for a quote</h2>
-            <ul class="request-list">
+            <div class="section-kicker" data-bind="home.request.kicker">Request checklist</div>
+            <h2 class="section-title" data-bind="home.request.title">What to send before asking for a quote</h2>
+            <ul class="request-list" data-bind-list="home.request.checklist">
               <li>Vessel make, model, length, and where it is located</li>
               <li>Engine brand, model, horsepower, and serial if available</li>
               <li>Whether the job is a failure diagnosis, planned repower, or fabrication request</li>
               <li>Photos of the engine space, access path, damaged parts, alarms, or current install</li>
               <li>How soon the work needs to happen, especially if haul-out or crane time is involved</li>
             </ul>
-            <p class="helper">
+            <p class="helper" data-bind="home.request.helper">
               The form below is still static. Hook it to email, a CRM, or Vercel Forms later. For now it gives the page the right structure.
             </p>
           </article>
@@ -235,17 +235,29 @@
         </div>
       </section>
 
+      <section class="contact-strip">
+        <div class="container contact-grid">
+          <div class="contact-item"><strong>Phone:</strong> <span data-bind="contact.phone">(910) 555-0188</span></div>
+          <div class="contact-item"><strong>Email:</strong> <span data-bind="contact.email">service@mdemarine.com</span></div>
+          <div class="contact-item"><strong>Area:</strong> <span data-bind="contact.serviceArea">Carolinas + Southeast</span></div>
+        </div>
+      </section>
+
       <footer class="footer">
         <div class="footer-inner">
-          <div>© 2026 MDEmarine. Marine engine support, fabrication, and parts sourcing.</div>
+          <div>© 2026 <span data-bind="brand.name">MDEmarine</span>. Marine engine support, fabrication, and parts sourcing.</div>
           <div class="footer-links">
             <a href="./index.html">Home</a>
             <a href="./engine-services.html">Engine Services</a>
             <a href="./marine-fabrication.html">Marine Fabrication</a>
             <a href="./parts-sales.html">Parts &amp; Sales</a>
+            <a href="./owner.html" class="footer-owner">Owner</a>
           </div>
         </div>
       </footer>
     </div>
+
+    <script src="./site-config.js"></script>
+    <script src="./site.js"></script>
   </body>
 </html>

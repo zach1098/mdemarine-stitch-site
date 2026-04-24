@@ -19,7 +19,7 @@
   <body>
     <header class="nav">
       <div class="nav-inner">
-        <a class="brand" href="./index.html">MDEmarine</a>
+        <a class="brand" href="./index.html" data-bind="brand.name">MDEmarine</a>
         <nav class="nav-links">
           <a href="./index.html">Home</a>
           <a href="./engine-services.html">Engine Services</a>
@@ -163,13 +163,17 @@
 
     <footer class="footer">
       <div class="footer-inner">
-        <div>© 2026 MDEmarine. Marine fabrication, install support, and project metalwork.</div>
+        <div>© 2026 <span data-bind="brand.name">MDEmarine</span>. Marine fabrication, install support, and project metalwork.</div>
         <div class="footer-links">
           <a href="./index.html">Home</a>
           <a href="./engine-services.html">Engine Services</a>
           <a href="./parts-sales.html">Parts &amp; Sales</a>
+          <a href="./owner.html" class="footer-owner">Owner</a>
         </div>
       </div>
     </footer>
+
+    <script src="./site-config.js"></script>
+    <script src="./site.js"></script>
   </body>
 </html>

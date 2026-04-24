@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MDEmarine | Owner Console</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./owner.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a href="./index.html" class="brand">MDEmarine</a>
+        <div class="topbar-actions">
+          <button id="logoutBtn" class="ghost hidden">Logout</button>
+        </div>
+      </header>
+
+      <section id="loginPanel" class="login-card">
+        <div class="kicker">Owner Login</div>
+        <h1>Control center</h1>
+        <p>Client-side MVP login. Move auth server-side before production use.</p>
+        <label for="passwordInput">Password</label>
+        <input id="passwordInput" type="password" placeholder="Enter owner password" />
+        <button id="loginBtn" class="primary">Unlock Console</button>
+        <div id="loginStatus" class="status"></div>
+      </section>
+
+      <section id="appPanel" class="app hidden">
+        <div class="layout">
+          <article class="panel editor-panel">
+            <div class="panel-head">
+              <div>
+                <div class="kicker">Theme + Content</div>
+                <h2>Editable schema</h2>
+              </div>
+              <button id="resetBtn" class="ghost">Reset draft</button>
+            </div>
+
+            <div id="formContainer" class="form-grid"></div>
+
+            <label class="schema-label" for="rawSchema">Raw JSON schema (advanced)</label>
+            <textarea id="rawSchema" class="raw-schema"></textarea>
+
+            <div class="actions">
+              <button id="saveDraftBtn" class="ghost">Save Draft</button>
+              <button id="refreshPreviewBtn" class="ghost">Refresh Preview</button>
+              <button id="publishBtn" class="primary">Publish Live</button>
+            </div>
+            <div id="editorStatus" class="status"></div>
+          </article>
+
+          <aside class="panel side-panel">
+            <div class="side-block">
+              <div class="kicker">Live preview</div>
+              <iframe id="previewFrame" src="./index.html?preview=1" title="Site preview"></iframe>
+            </div>
+
+            <div class="side-block">
+              <div class="kicker">Rollback</div>
+              <select id="versionSelect"></select>
+              <button id="rollbackBtn" class="ghost">Rollback to selected</button>
+            </div>
+
+            <div class="side-block">
+              <div class="kicker">Chat panel</div>
+              <div id="chatHistory" class="chat-history"></div>
+              <div class="chat-controls">
+                <input id="chatInput" type="text" placeholder="Ask the assistant..." />
+                <button id="chatSendBtn" class="primary">Send</button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script src="./site-config.js"></script>
+    <script src="./site.js"></script>
+    <script src="./owner.js"></script>
+  </body>
+</html>

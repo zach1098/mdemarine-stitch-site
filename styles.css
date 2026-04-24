@@ -586,6 +586,39 @@ textarea {
   background: #e7edf2;
 }
 
+.contact-strip {
+  background: var(--navy);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 16px 0;
+}
+
+.contact-item {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 0.92rem;
+}
+
+.contact-item strong {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: rgba(255, 179, 135, 0.95);
+}
+
+.footer-owner {
+  color: var(--accent-soft);
+}
+
 @media (max-width: 980px) {
   .hero-grid,
   .page-hero-grid,
@@ -597,7 +630,8 @@ textarea {
 
   .grid-3,
   .grid-2,
-  .stat-strip {
+  .stat-strip,
+  .contact-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -618,7 +652,8 @@ textarea {
   .grid-3,
   .grid-2,
   .stat-strip,
-  .form-grid {
+  .form-grid,
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
