@@ -691,6 +691,12 @@ textarea {
   object-fit: cover;
 }
 
+.page-hero-media--portrait {
+  width: min(100%, 420px);
+  aspect-ratio: 3 / 4;
+  justify-self: end;
+}
+
 .split {
   display: grid;
   grid-template-columns: 0.92fr 1.08fr;
@@ -750,6 +756,11 @@ textarea {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   transition: transform 420ms ease, filter 420ms ease;
+}
+
+.project-photo--portrait img {
+  object-fit: contain;
+  background: var(--navy);
 }
 
 .project-photo:hover img {
@@ -973,6 +984,10 @@ textarea {
 
   .hero-grid {
     min-height: auto;
+  }
+
+  .page-hero-media--portrait {
+    justify-self: center;
   }
 
   .hero-panel {
