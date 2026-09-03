@@ -3,27 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MDEmarine | Engine Services</title>
+    <title>Marine Engine Diagnostics and Repair | MDE Marine</title>
     <meta
       name="description"
-      content="Engine change-out planning, troubleshooting, repower support, and mechanical project scoping for marine engine work."
+      content="Marine diesel diagnostics, troubleshooting, maintenance, component repair, and engine or transmission rebuild support from MDE Marine."
     />
-    <meta name="keywords" content="marine engine services, marine diagnostics, repower planning, engine change out" />
+    <meta
+      name="keywords"
+      content="marine diesel diagnostics, marine engine repair, diesel troubleshooting, engine rebuild, transmission rebuild, Manns Harbor NC"
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="MDEmarine | Engine Services" />
+    <meta property="og:title" content="Marine Engine Diagnostics and Repair | MDE Marine" />
     <meta
       property="og:description"
-      content="Engine change-out planning, troubleshooting, repower support, and mechanical project scoping for marine engine work."
+      content="Marine diesel diagnostics, troubleshooting, maintenance, component repair, and engine or transmission rebuild support."
     />
     <meta property="og:url" content="https://mdemarine-stitch-site.vercel.app/engine-services.html" />
-    <meta property="og:image" content="https://mdemarine-stitch-site.vercel.app/assets/projects/engine-install-detail.png" />
+    <meta property="og:image" content="https://mdemarine-stitch-site.vercel.app/assets/mde/engine-cylinder-head.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MDEmarine | Engine Services" />
+    <meta name="twitter:title" content="Marine Engine Diagnostics and Repair | MDE Marine" />
     <meta
       name="twitter:description"
-      content="Engine change-out planning, troubleshooting, repower support, and mechanical project scoping for marine engine work."
+      content="Marine diesel diagnostics, troubleshooting, maintenance, component repair, and engine or transmission rebuild support."
     />
-    <meta name="twitter:image" content="https://mdemarine-stitch-site.vercel.app/assets/projects/engine-install-detail.png" />
+    <meta name="twitter:image" content="https://mdemarine-stitch-site.vercel.app/assets/mde/engine-cylinder-head.jpg" />
     <link rel="canonical" href="https://mdemarine-stitch-site.vercel.app/engine-services.html" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,167 +36,194 @@
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body data-page="engine-services">
     <header class="nav">
       <div class="nav-inner">
-        <a class="brand" href="./index.html" data-bind="brand.name">MDEmarine</a>
-        <nav class="nav-links">
+        <a class="brand" href="./index.html" data-bind="brand.name">MDE Marine</a>
+        <nav class="nav-links" aria-label="Primary navigation">
           <a href="./index.html">Home</a>
           <a class="active" href="./engine-services.html">Engine Services</a>
+          <a href="./engine-repower.html">Engine Repower</a>
           <a href="./marine-fabrication.html">Marine Fabrication</a>
           <a href="./parts-sales.html">Parts &amp; Sales</a>
-          <a href="./index.html#request">Request</a>
         </nav>
-        <a class="nav-cta" href="./index.html#request">Start Request</a>
+        <a class="nav-cta" data-bind-tel="contact.phone" href="tel:+12522561783">Call Now</a>
       </div>
     </header>
 
-    <section class="page-hero">
-      <div class="page-hero-grid">
-        <div>
-          <div class="eyebrow">Engine Services</div>
-          <h1>Change-outs, troubleshooting, and repower planning</h1>
-          <p>
-            Use this page for engine issues, replacement planning, and project scoping that needs more than a vague service blurb.
-          </p>
-          <div class="hero-actions">
-            <a class="btn" href="./index.html#request">Request service</a>
-            <a class="btn-secondary" href="./parts-sales.html">Need parts instead?</a>
+    <main>
+      <section class="page-hero">
+        <div class="page-hero-grid">
+          <div>
+            <div class="eyebrow">Engine Services</div>
+            <h1>Engine diagnostics, troubleshooting, and repair</h1>
+            <p>
+              From a difficult onboard problem to a complete mechanical rebuild, MDE Marine focuses on identifying the failure and defining the right repair before unnecessary labor and parts start adding up.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" data-bind-tel="contact.phone" href="tel:+12522561783">Call About an Engine</a>
+              <a class="btn-secondary" data-bind-mailto="contact.email" href="mailto:mdemarineobx@gmail.com">Email Engine Details</a>
+            </div>
+          </div>
+          <div class="page-hero-media">
+            <img
+              src="./assets/mde/engine-diagnostics-onboard.jpg"
+              alt="Technician diagnosing a marine diesel engine aboard a vessel"
+              decoding="async"
+            />
           </div>
         </div>
-        <div class="page-hero-media">
-          <img src="./assets/projects/engine-install-detail.png" alt="Engine install detail in a marine engine room" />
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="page-section">
-      <div class="container">
-        <div class="section-intro">
-          <div class="section-kicker">What this page should say</div>
-          <h2 class="section-title">The work before the work starts</h2>
-          <p class="section-copy">
-            Most engine projects go sideways because nobody nails down the failure, the access plan, or the real install scope early enough. This page fixes that. It tells people what kind of support they can ask for and what information they need to bring.
-          </p>
-        </div>
+      <section class="page-section">
+        <div class="container">
+          <div class="section-intro">
+            <div class="section-kicker">Service Scope</div>
+            <h2 class="section-title">Find the problem, plan the repair, execute the work</h2>
+            <p class="section-copy">
+              Clear diagnostics and a realistic pre-repair evaluation help determine whether the right answer is routine service, onboard component work, or a deeper engine or transmission rebuild.
+            </p>
+          </div>
 
-        <div class="grid grid-3">
-          <article class="service-card">
-            <div class="card-kicker">Diagnostics</div>
-            <h3 class="card-title">Problem calls</h3>
-            <p class="card-copy">Use this for boats that already have a problem and need a clear read on what is actually failing.</p>
-            <ul class="card-list">
-              <li>No-start, low power, smoke, or overheat complaints</li>
-              <li>Oil, coolant, or fuel leak tracing</li>
-              <li>Noise, vibration, or alignment concerns</li>
+          <div class="grid grid-3">
+            <article class="service-card">
+              <div class="card-kicker">Diagnostics</div>
+              <h3 class="card-title">Problem Calls</h3>
+              <p class="card-copy">Hands-on troubleshooting for engines that are not starting, running, cooling, or producing power as they should.</p>
+              <ul class="card-list">
+                <li>No-start, low-power, smoke, and overheating complaints</li>
+                <li>Oil, coolant, fuel, noise, and vibration concerns</li>
+                <li>Systematic testing before parts are replaced</li>
+              </ul>
+            </article>
+
+            <article class="service-card">
+              <div class="card-kicker">Repairs</div>
+              <h3 class="card-title">Engine Services</h3>
+              <p class="card-copy">Mechanical service and repair work scaled to the condition of the engine, transmission, and onboard components.</p>
+              <ul class="card-list">
+                <li>General maintenance</li>
+                <li>Onboard component repair and replacement, including alternators, starters, water pumps, and injectors</li>
+                <li>In-frame and out-of-frame engine and transmission rebuilds and replacement</li>
+              </ul>
+            </article>
+
+            <article class="service-card dark">
+              <div class="card-kicker">Execution</div>
+              <h3 class="card-title">Boat Yard Coordination</h3>
+              <p class="card-copy">For repair work that depends on yard access, scheduling, lifting, outside trades, or other vessel systems.</p>
+              <ul class="card-list">
+                <li>Haul-out and schedule-sensitive work</li>
+                <li>Crane, lift, and access coordination</li>
+                <li>Pre-repair evaluation</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section muted-block">
+        <div class="container split">
+          <article class="copy-card">
+            <div class="section-kicker">Before You Call</div>
+            <h2 class="section-title">Information that speeds up diagnosis</h2>
+            <ul class="request-list">
+              <li>Engine make, model, serial number, horsepower, and hours if known</li>
+              <li>Current symptoms, recent alarms, and what changed before the issue began</li>
+              <li>Photos of the engine room, service access, engine tag, and affected components</li>
+              <li>Whether the vessel is in the water, hauled out, or scheduled with a boat yard</li>
+              <li>Recent maintenance, repairs, or parts already replaced</li>
             </ul>
           </article>
 
-          <article class="service-card">
-            <div class="card-kicker">Repowers</div>
-            <h3 class="card-title">Change-out planning</h3>
-            <p class="card-copy">For projects where the engine is being removed or replaced and the hard part is coordinating the full scope without missing hidden work.</p>
-            <ul class="card-list">
-              <li>Removal path and access review</li>
-              <li>Fitment questions and engine-room constraints</li>
-              <li>Mounting, disconnect, exhaust, cooling, and controls scope</li>
-            </ul>
-          </article>
-
-          <article class="service-card dark">
-            <div class="card-kicker">Execution</div>
-            <h3 class="card-title">Yard coordination</h3>
-            <p class="card-copy">The site should make it obvious whether this is dockside troubleshooting or a yard job that needs planning, crane time, or fabrication support.</p>
-            <ul class="card-list">
-              <li>Haul-out and schedule-sensitive jobs</li>
-              <li>Crane and lift coordination</li>
-              <li>Scope cleanup before labor starts running</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-section muted-block">
-      <div class="container split">
-        <article class="copy-card">
-          <div class="section-kicker">Good intake beats good marketing</div>
-          <h2 class="section-title">What owners and captains should send first</h2>
-          <ul class="request-list">
-            <li>Engine make, model, serial number, and hours if known</li>
-            <li>Current symptoms, recent alarms, and what changed before the issue started</li>
-            <li>Photos of the engine room, service access, and the affected parts</li>
-            <li>Whether the vessel is in the water, hauled out, or waiting on a yard slot</li>
-            <li>Whether the job is diagnosis only, repair, or full replacement planning</li>
-          </ul>
-          <p class="helper">
-            This keeps the page honest. It does not promise magic. It tells people what information leads to a useful first conversation.
-          </p>
-        </article>
-
-        <article class="panel dark">
-          <div class="card-kicker">Typical scope buckets</div>
-          <h3 class="card-title">How the work usually breaks down</h3>
-          <ul class="card-list">
-            <li>Quick dockside troubleshooting to confirm the likely failure</li>
-            <li>Mechanical repair plan for components that can be fixed in place</li>
-            <li>Repower planning when repair cost, reliability, or downtime makes replacement smarter</li>
-            <li>Cross-page handoff to fabrication when mounts, supports, or install modifications are needed</li>
-            <li>Cross-page handoff to parts sourcing when lead times or part ID are the real blocker</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="page-section">
-      <div class="container">
-        <div class="section-intro">
-          <div class="section-kicker">Use the real images</div>
-          <h2 class="section-title">Mechanical detail belongs on the engine page</h2>
-          <p class="section-copy">
-            This is the kind of photo that earns its keep here. It feels specific to engine work instead of looking like another generated shipyard render.
-          </p>
-        </div>
-
-        <div class="media-grid">
-          <article class="gallery-card tall">
-            <img src="./assets/projects/engine-install-detail.png" alt="Marine engine install detail with hoses and components" />
-            <div class="gallery-copy">
-              <h3>Install detail</h3>
-              <p>Use this on the engine page, not hidden inside a generic home page block.</p>
+          <article class="panel dark">
+            <div class="card-kicker">Need a Replacement?</div>
+            <h3 class="card-title">Engine repowers have their own planning process</h3>
+            <p class="card-copy">
+              When repair is no longer the practical answer, move into a dedicated repower plan covering fitment, suppliers, custom mounts, 3D scanning, CAD layout, and vessel-system coordination.
+            </p>
+            <div class="inline-actions">
+              <a class="btn" href="./engine-repower.html">Explore Engine Repowers</a>
             </div>
           </article>
-          <div class="gallery-stack">
-            <article class="service-card">
-              <div class="card-kicker">Cross-link</div>
-              <h3 class="card-title">Need metalwork too?</h3>
-              <p class="card-copy">
-                If the engine job requires brackets, support structure, polished tubing, or install cleanup, the fabrication page now exists and should be linked from here.
-              </p>
-              <div class="inline-actions">
-                <a class="btn" href="./marine-fabrication.html">Open fabrication page</a>
-              </div>
-            </article>
-            <article class="service-card">
-              <div class="card-kicker">Cross-link</div>
-              <h3 class="card-title">Still identifying the failed part?</h3>
-              <p class="card-copy">
-                The parts page is where you tell people what photos and engine data to send before anyone starts chasing inventory.
-              </p>
-              <div class="inline-actions">
-                <a class="btn" href="./parts-sales.html">Open parts page</a>
-              </div>
-            </article>
+        </div>
+      </section>
+
+      <section id="engine-gallery" class="page-section">
+        <div class="container">
+          <div class="section-intro">
+            <div class="section-kicker">Engine Work</div>
+            <h2 class="section-title">Diagnosis and repair from the engine room to the shop</h2>
+            <p class="section-copy">
+              These are real examples of onboard access, internal engine condition, component repair, and the damage that a proper evaluation needs to uncover.
+            </p>
+          </div>
+
+          <div class="photo-grid photo-grid-4">
+            <figure class="project-photo">
+              <img
+                src="./assets/mde/engine-diagnostics-onboard.jpg"
+                alt="Technician working inside a vessel engine compartment"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Onboard diagnostics</figcaption>
+            </figure>
+            <figure class="project-photo">
+              <img
+                src="./assets/mde/engine-cylinder-head.jpg"
+                alt="Open marine engine showing cylinders during repair"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Internal inspection</figcaption>
+            </figure>
+            <figure class="project-photo">
+              <img
+                src="./assets/mde/engine-shop-repair.jpg"
+                alt="Technician rebuilding a marine engine component in the shop"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Shop repair</figcaption>
+            </figure>
+            <figure class="project-photo">
+              <img
+                src="./assets/mde/engine-valve-damage.jpg"
+                alt="Close-up of damaged engine valves and combustion chamber"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Failure evaluation</figcaption>
+            </figure>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section class="contact-strip" aria-label="Contact information">
+        <div class="container contact-grid">
+          <div class="contact-item">
+            <strong>Phone</strong>
+            <a data-bind="contact.phone" data-bind-tel="contact.phone" href="tel:+12522561783">(252) 256-1783</a>
+          </div>
+          <div class="contact-item">
+            <strong>Email</strong>
+            <a data-bind="contact.email" data-bind-mailto="contact.email" href="mailto:mdemarineobx@gmail.com">mdemarineobx@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <strong>Location</strong>
+            <span data-bind="contact.serviceArea">Manns Harbor, North Carolina</span>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="footer-inner">
-        <div>© 2026 <span data-bind="brand.name">MDEmarine</span>. Engine change-out planning, troubleshooting, and repower support.</div>
+        <div>&copy; 2026 <span data-bind="brand.name">MDE Marine</span>. Marine engine diagnostics, troubleshooting, and repair.</div>
         <div class="footer-links">
           <a href="./index.html">Home</a>
+          <a href="./engine-repower.html">Engine Repower</a>
           <a href="./marine-fabrication.html">Marine Fabrication</a>
           <a href="./parts-sales.html">Parts &amp; Sales</a>
           <a href="./owner.html" class="footer-owner">Owner</a>

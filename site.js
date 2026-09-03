@@ -1,9 +1,9 @@
 (function () {
   var KEYS = {
-    published: "mde_site_published_v1",
-    draft: "mde_site_draft_v1",
-    versions: "mde_site_versions_v1",
-    ownerSession: "mde_owner_session_v1"
+    published: "mde_site_published_v2",
+    draft: "mde_site_draft_v2",
+    versions: "mde_site_versions_v2",
+    ownerSession: "mde_owner_session_v2"
   };
 
   function clone(value) {
@@ -113,6 +113,23 @@
     });
   }
 
+  function bindContactLinks(config) {
+    document.querySelectorAll("[data-bind-tel]").forEach(function (el) {
+      var path = el.getAttribute("data-bind-tel");
+      var value = getByPath(config, path);
+      if (!value) return;
+
+      var normalized = String(value).trim().replace(/[^\d+]/g, "");
+      if (normalized) el.setAttribute("href", "tel:" + normalized);
+    });
+
+    document.querySelectorAll("[data-bind-mailto]").forEach(function (el) {
+      var path = el.getAttribute("data-bind-mailto");
+      var value = getByPath(config, path);
+      if (value) el.setAttribute("href", "mailto:" + String(value).trim());
+    });
+  }
+
   function upsertMeta(selector, attribute, value) {
     if (!value) return;
     var el = document.querySelector(selector);
@@ -121,6 +138,8 @@
   }
 
   function applySeo(config) {
+    if (!document.body || document.body.getAttribute("data-page") !== "home") return;
+
     var seo = config.seo || {};
     var brandName = getByPath(config, "brand.name") || "MDEmarine";
     var title = seo.title || document.title || brandName;
@@ -184,6 +203,7 @@
   applySeo(config);
   bindText(config);
   bindLinks(config);
+  bindContactLinks(config);
 
   window.MDE_SITE = {
     keys: KEYS,

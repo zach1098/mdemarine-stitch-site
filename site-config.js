@@ -1,6 +1,6 @@
 (function () {
   window.MDE_DEFAULT_CONFIG = {
-    schemaVersion: 1,
+    schemaVersion: 2,
     auth: {
       ownerPassword: "mde-owner-2026"
     },
@@ -8,16 +8,16 @@
       endpoint: "/api/site-agent"
     },
     brand: {
-      name: "MDEmarine"
+      name: "MDE Marine"
     },
     seo: {
-      title: "MDEmarine | Marine Engine Support, Fabrication, and Parts",
+      title: "MDE Marine | Diesel Engine Service, Repowers, Fabrication, and Parts",
       description:
-        "Marine engine support, repower planning, fabrication, and parts sourcing for engine change-outs, troubleshooting, and project execution.",
+        "MDE Marine provides marine diesel diagnostics, repairs, engine repowers, custom fabrication, and parts sourcing from Manns Harbor, North Carolina.",
       keywords:
-        "marine engine support, repower planning, marine fabrication, marine engine parts, engine change out, marine diagnostics",
+        "marine diesel repair, engine repower, marine fabrication, heat exchangers, transmission cooler mounts, marine engine parts, Manns Harbor NC",
       canonicalUrl: "https://mdemarine-stitch-site.vercel.app/",
-      ogImage: "https://mdemarine-stitch-site.vercel.app/assets/projects/team-john-deere-engine.png"
+      ogImage: "https://mdemarine-stitch-site.vercel.app/assets/mde/home-boat-yard.jpg"
     },
     theme: {
       bg: "#eef2f5",
@@ -31,94 +31,99 @@
       accentSoft: "#ffb387"
     },
     contact: {
-      phone: "(910) 555-0188",
-      email: "service@mdemarine.com",
-      serviceArea: "Carolinas + Southeast"
+      phone: "(252) 256-1783",
+      email: "mdemarineobx@gmail.com",
+      serviceArea: "Manns Harbor, North Carolina"
     },
     home: {
-      eyebrow: "Marine Engine Support",
-      headline: "Engine change-outs, diagnostics, fabrication, and project support",
+      eyebrow: "Marine Diesel Specialists",
+      headline: "Engine repowers, diagnostics, fabrication, and project support",
       subhead:
-        "Marine engine support, fabrication, and parts sourcing for owners, captains, and yards that need a cleaner path from first inquiry to real project scope.",
+        "Practical marine diesel support for owners, captains, and boat yards—from troubleshooting and repairs to complete repower planning, custom fabrication, and hard-to-source parts.",
       stats: [
-        { label: "Best Fit", value: "Repower Planning" },
-        { label: "Problem Calls", value: "Heat, Smoke, Vibration" },
-        { label: "Project Scope", value: "Dockside and Yard Work" }
+        { label: "Core Service", value: "Engine Repowers" },
+        { label: "Engine Support", value: "Diagnostics & Repair" },
+        { label: "Location", value: "Manns Harbor, NC" }
       ],
       services: [
         {
           kicker: "01",
-          title: "Engine services",
+          title: "Engine Services",
           copy:
-            "Engine change-outs, repower planning, troubleshooting, and mechanical support for projects that need more than generic boilerplate.",
+            "Diagnostics, troubleshooting, maintenance, component repair, and engine or transmission rebuild support.",
           list: [
-            "Change-out planning and removal scope",
-            "Overheat, no-start, smoke, and vibration diagnosis",
-            "Job scoping before the yard clock starts burning"
+            "No-start, low-power, smoke, and overheating diagnostics",
+            "Onboard component repair and replacement",
+            "In-frame and out-of-frame rebuilds"
           ],
           href: "./engine-services.html"
         },
         {
           kicker: "02",
-          title: "Marine fabrication",
+          title: "Engine Repower",
           copy:
-            "Fabrication support for mounts, brackets, polished tubing, install cleanup, and the small metalwork jobs that always appear once a project opens up.",
+            "Repower planning, supplier coordination, 3D scanning, CAD layout, custom mounts, and installation integration.",
           list: [
-            "Mounts, brackets, trays, and repair parts",
-            "Aluminum and stainless detail work",
-            "Real project photo gallery from the export"
+            "Pre-installation planning and fitment review",
+            "Custom engine mount estimates",
+            "Fabrication and vessel-system coordination"
+          ],
+          href: "./engine-repower.html"
+        },
+        {
+          kicker: "03",
+          title: "Marine Fabrication",
+          copy:
+            "Custom heat exchangers, cooler mounting kits, engine mounts, brackets, repair parts, and anodized aluminum welding.",
+          list: [
+            "Heat exchangers, mounts, brackets, and repair parts",
+            "Transmission cooler mounting kits",
+            "Anodized aluminum welding and reconstruction"
           ],
           href: "./marine-fabrication.html"
         },
         {
-          kicker: "03",
-          title: "Parts and sales",
+          kicker: "04",
+          title: "Parts & Sales",
           copy:
-            "Parts sourcing and repair planning language that helps people explain what they need before they waste money ordering the wrong thing.",
+            "Accurate parts identification and sourcing backed by decades of marine diesel supplier relationships.",
           list: [
-            "Identify the failed part first",
-            "Separate urgent needs from planned work",
-            "Capture engine model, serial, and photos up front"
+            "45 years of parts and supplier relationships",
+            "Support for Caterpillar, Cummins, Detroit, and more",
+            "OEM and practical aftermarket options"
           ],
           href: "./parts-sales.html"
         }
       ],
       gallery: {
-        kicker: "Project gallery",
-        title: "Real photos from the missing export",
+        kicker: "From the Shop",
+        title: "Real work, real equipment, real boat-yard experience",
         copy:
-          "Real project imagery helps the site feel grounded and gives the fabrication and engine sections something specific to show.",
+          "MDE Marine supports projects in the shop, aboard the vessel, and alongside the boat yard from Manns Harbor, North Carolina.",
         items: [
           {
-            image: "./assets/projects/team-john-deere-engine.png",
-            title: "Shop and project credibility",
+            image: "./assets/mde/home-boat-yard.jpg",
+            title: "Boat-yard coordination",
             copy:
-              "Use this kind of image when you want the site to feel like an actual operation instead of a mockup."
+              "Project support that accounts for access, scheduling, lifting, fabrication, and the work around the engine."
           },
           {
-            image: "./assets/projects/fabrication-weld-detail.png",
-            title: "Fabrication detail",
-            copy: "Polished tubing and weld work that looks like real shop output, because it is."
+            image: "./assets/mde/home-engine-work.jpg",
+            title: "Hands-on engine work",
+            copy: "Diagnostics and repairs performed where the problem actually lives."
           },
           {
-            image: "./assets/projects/engine-install-detail.png",
-            title: "Mechanical install",
-            copy: "Engine room close-up that fits the engine services page better than another AI hero image."
+            image: "./assets/mde/home-shop-dogs.jpg",
+            title: "Part of the crew",
+            copy: "The shop team includes two very committed floor supervisors."
           }
         ]
       },
-      request: {
-        kicker: "Request checklist",
-        title: "What to send before asking for a quote",
-        helper:
-          "The form below is still static. Hook it to email, a CRM, or Vercel Forms later. For now it gives the page the right structure.",
-        checklist: [
-          "Vessel make, model, length, and where it is located",
-          "Engine brand, model, horsepower, and serial if available",
-          "Whether the job is a failure diagnosis, planned repower, or fabrication request",
-          "Photos of the engine space, access path, damaged parts, alarms, or current install",
-          "How soon the work needs to happen, especially if haul-out or crane time is involved"
-        ]
+      contact: {
+        kicker: "Talk Through the Job",
+        title: "Call or email MDE Marine directly",
+        copy:
+          "Have the vessel location, engine make and model, serial number, photos, and a short description of the issue ready when possible."
       }
     }
   };

@@ -41,7 +41,7 @@
     { path: "brand.name", label: "Brand Name", type: "text" },
     { path: "contact.phone", label: "Contact Phone", type: "text" },
     { path: "contact.email", label: "Contact Email", type: "text" },
-    { path: "contact.serviceArea", label: "Service Area", type: "text" },
+    { path: "contact.serviceArea", label: "Location", type: "text" },
     { path: "chat.endpoint", label: "Chat Endpoint", type: "text", full: true },
 
     { path: "seo.title", label: "SEO Title", type: "text", full: true },
@@ -65,9 +65,10 @@
     { path: "home.services.0.title", label: "Service Card 1 Title", type: "text" },
     { path: "home.services.1.title", label: "Service Card 2 Title", type: "text" },
     { path: "home.services.2.title", label: "Service Card 3 Title", type: "text" },
+    { path: "home.services.3.title", label: "Service Card 4 Title", type: "text" },
 
-    { path: "home.request.title", label: "Request Section Title", type: "text", full: true },
-    { path: "home.request.checklist", label: "Request Checklist (1 line per bullet)", type: "list", full: true },
+    { path: "home.contact.title", label: "Contact Section Title", type: "text", full: true },
+    { path: "home.contact.copy", label: "Contact Section Copy", type: "textarea", full: true },
 
     { path: "home.gallery.items.0.image", label: "Gallery Image #1 URL", type: "image", full: true },
     { path: "home.gallery.items.1.image", label: "Gallery Image #2 URL", type: "image", full: true },

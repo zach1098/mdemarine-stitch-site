@@ -4,13 +4,16 @@ Static marketing site with an owner console for fast content control.
 
 ## What’s included
 
-- `index.html` + service pages (`engine-services.html`, `marine-fabrication.html`, `parts-sales.html`)
+- `index.html` + service pages (`engine-services.html`, `engine-repower.html`, `marine-fabrication.html`, `parts-sales.html`)
 - `owner.html` owner console (login, content/theme editor, live preview, publish + rollback, chat panel)
 - `api/site-agent.js` Vercel serverless endpoint for chat-driven site edits
 - `site-config.js` default schema
 - `site.js` runtime config loader + binder
 - `styles.css` public site styles
 - `owner.css`, `owner.js` owner console styles/logic
+- `assets/mde/` client-supplied project, fabrication, engine-service, and parts photos
+
+The public site uses direct phone and email links instead of a web request form.
 
 ## Owner console (MVP)
 

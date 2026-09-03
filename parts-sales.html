@@ -3,27 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MDEmarine | Parts and Sales</title>
+    <title>Marine Diesel Parts Sourcing and Sales | MDE Marine</title>
     <meta
       name="description"
-      content="Parts sourcing and repair planning for marine engines, with better intake questions and cleaner scoping before inventory or ordering decisions."
+      content="Marine diesel parts identification and sourcing backed by 45 years of supplier relationships, including Caterpillar, Cummins, Detroit, and other leading manufacturers."
     />
-    <meta name="keywords" content="marine parts, marine engine parts, parts sourcing, marine repair planning" />
+    <meta
+      name="keywords"
+      content="marine diesel parts, Caterpillar marine parts, Cummins marine parts, Detroit Diesel parts, engine gaskets, marine parts sourcing"
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="MDEmarine | Parts and Sales" />
+    <meta property="og:title" content="Marine Diesel Parts Sourcing and Sales | MDE Marine" />
     <meta
       property="og:description"
-      content="Parts sourcing and repair planning for marine engines, with better intake questions and cleaner scoping before inventory or ordering decisions."
+      content="Marine diesel parts identification and sourcing backed by 45 years of supplier and manufacturer relationships."
     />
     <meta property="og:url" content="https://mdemarine-stitch-site.vercel.app/parts-sales.html" />
-    <meta property="og:image" content="https://mdemarine-stitch-site.vercel.app/assets/projects/team-john-deere-engine.png" />
+    <meta property="og:image" content="https://mdemarine-stitch-site.vercel.app/assets/mde/parts-caterpillar-gaskets.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MDEmarine | Parts and Sales" />
+    <meta name="twitter:title" content="Marine Diesel Parts Sourcing and Sales | MDE Marine" />
     <meta
       name="twitter:description"
-      content="Parts sourcing and repair planning for marine engines, with better intake questions and cleaner scoping before inventory or ordering decisions."
+      content="Marine diesel parts identification and sourcing backed by 45 years of supplier and manufacturer relationships."
     />
-    <meta name="twitter:image" content="https://mdemarine-stitch-site.vercel.app/assets/projects/team-john-deere-engine.png" />
+    <meta name="twitter:image" content="https://mdemarine-stitch-site.vercel.app/assets/mde/parts-caterpillar-gaskets.jpg" />
     <link rel="canonical" href="https://mdemarine-stitch-site.vercel.app/parts-sales.html" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,167 +36,240 @@
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body data-page="parts-sales">
     <header class="nav">
       <div class="nav-inner">
-        <a class="brand" href="./index.html" data-bind="brand.name">MDEmarine</a>
-        <nav class="nav-links">
+        <a class="brand" href="./index.html" data-bind="brand.name">MDE Marine</a>
+        <nav class="nav-links" aria-label="Primary navigation">
           <a href="./index.html">Home</a>
           <a href="./engine-services.html">Engine Services</a>
+          <a href="./engine-repower.html">Engine Repower</a>
           <a href="./marine-fabrication.html">Marine Fabrication</a>
           <a class="active" href="./parts-sales.html">Parts &amp; Sales</a>
-          <a href="./index.html#request">Request</a>
         </nav>
-        <a class="nav-cta" href="./index.html#request">Start Request</a>
+        <a class="nav-cta" data-bind-tel="contact.phone" href="tel:+12522561783">Call Now</a>
       </div>
     </header>
 
-    <section class="page-hero">
-      <div class="page-hero-grid">
-        <div>
-          <div class="eyebrow">Parts and Sales</div>
-          <h1>Parts sourcing starts with accurate engine info and a clear request</h1>
-          <p>
-            This page focuses on identifying what is actually needed before quoting or ordering, so the first inquiry is more useful.
-          </p>
-          <div class="hero-actions">
-            <a class="btn" href="./index.html#request">Request parts help</a>
-            <a class="btn-secondary" href="./engine-services.html">Back to engine services</a>
+    <main>
+      <section class="page-hero">
+        <div class="page-hero-grid">
+          <div>
+            <div class="eyebrow">Parts and Sales</div>
+            <h1>Parts sourcing starts with accurate engine info and a clear request</h1>
+            <p>
+              The right model, serial number, photos, and application details turn a parts search into an answer. MDE Marine brings decades of supplier relationships to the search.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" data-bind-tel="contact.phone" href="tel:+12522561783">Call About a Part</a>
+              <a class="btn-secondary" data-bind-mailto="contact.email" href="mailto:mdemarineobx@gmail.com">Email Part Details</a>
+            </div>
+          </div>
+          <div class="page-hero-media">
+            <img
+              src="./assets/mde/parts-caterpillar-gaskets.jpg"
+              alt="Organized Caterpillar marine engine gaskets and service parts"
+              decoding="async"
+            />
           </div>
         </div>
-        <div class="page-hero-media">
-          <img src="./assets/projects/team-john-deere-engine.png" alt="Team standing beside a marine engine" />
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="page-section">
-      <div class="container">
-        <div class="section-intro">
-          <div class="section-kicker">Useful parts-page copy</div>
-          <h2 class="section-title">Tell people what you need from them before chasing stock</h2>
-          <p class="section-copy">
-            Without engine data, serial information, or photos, a parts request becomes a guessing game. This page should do intake work first.
-          </p>
-        </div>
-
-        <div class="grid grid-3">
-          <article class="service-card">
-            <div class="card-kicker">Identification</div>
-            <h3 class="card-title">Get the part right first</h3>
-            <p class="card-copy">Ask for engine model, serial number, and photos before anyone starts naming components off a blurry phone call.</p>
-            <ul class="card-list">
-              <li>Engine tag and serial photo</li>
-              <li>Current component photo from multiple angles</li>
-              <li>Context on symptoms or reason for replacement</li>
-            </ul>
-          </article>
-
-          <article class="service-card">
-            <div class="card-kicker">Scoping</div>
-            <h3 class="card-title">Repair versus replacement</h3>
-            <p class="card-copy">Sometimes the issue is not just a missing part, it is a larger engine or fabrication problem. The page should acknowledge that early.</p>
-            <ul class="card-list">
-              <li>Confirm whether the failure is already diagnosed</li>
-              <li>Decide if sourcing alone solves the problem</li>
-              <li>Escalate to engine or fabrication scope when needed</li>
-            </ul>
-          </article>
-
-          <article class="service-card dark">
-            <div class="card-kicker">Timing</div>
-            <h3 class="card-title">Urgent, planned, or tied to yard dates</h3>
-            <p class="card-copy">Lead time matters. A clean parts page should separate emergency needs from planned jobs so the next step is obvious.</p>
-            <ul class="card-list">
-              <li>Boat down right now</li>
-              <li>Scheduled repair within a known window</li>
-              <li>Repower or fabrication project still in planning</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-section muted-block">
-      <div class="container split">
-        <article class="copy-card">
-          <div class="section-kicker">What the request should include</div>
-          <h2 class="section-title">Use this page to collect better parts requests</h2>
-          <ul class="request-list">
-            <li>Engine make, model, serial, and horsepower</li>
-            <li>Name or photo of the failed part if known</li>
-            <li>Whether the part is OEM-specific or an acceptable aftermarket replacement</li>
-            <li>Whether install help or fabrication support is also needed</li>
-            <li>Deadline, boat location, and whether the project is already in a yard schedule</li>
-          </ul>
-          <p class="helper">
-            This helps visitors send a request someone can actually act on instead of forcing a long back-and-forth before the basics are known.
-          </p>
-        </article>
-
-        <article class="panel dark">
-          <div class="card-kicker">Best handoffs</div>
-          <h3 class="card-title">Where parts requests usually go next</h3>
-          <ul class="card-list">
-            <li>Back to engine services if the failure itself is still unclear</li>
-            <li>To fabrication when the replacement needs custom fitment, mounts, or support pieces</li>
-            <li>To the main request form when the visitor already has enough detail to start the conversation</li>
-          </ul>
-          <div class="inline-actions">
-            <a class="btn" href="./engine-services.html">Engine services</a>
-            <a class="btn-secondary" href="./marine-fabrication.html">Fabrication page</a>
+      <section class="page-section">
+        <div class="container">
+          <div class="section-intro">
+            <div class="section-kicker">Specialty Parts</div>
+            <h2 class="section-title">Parts sourcing</h2>
+            <p class="section-copy">
+              MDE Marine identifies and sources parts for marine diesel repairs, rebuilds, repowers, and planned maintenance—without treating every engine like the same catalog lookup.
+            </p>
           </div>
-        </article>
-      </div>
-    </section>
 
-    <section class="page-section">
-      <div class="container">
-        <div class="section-intro">
-          <div class="section-kicker">Real project context</div>
-          <h2 class="section-title">Use people and equipment photos where they help</h2>
-          <p class="section-copy">
-            The parts page should not just be rows of imaginary product blocks. A real-world image gives it context and keeps the site from feeling like a generated parts catalog.
-          </p>
+          <div class="grid grid-3">
+            <article class="service-card dark">
+              <div class="card-kicker">Relationships</div>
+              <h3 class="card-title">45 Years of Parts and Supplier Relationships</h3>
+              <p class="card-copy">Long-standing industry relationships help locate the correct part, understand alternatives, and navigate availability.</p>
+              <ul class="card-list">
+                <li>Parts for leading diesel engine manufacturers including Caterpillar, Cummins, and Detroit</li>
+                <li>Support for current, legacy, and difficult-to-source applications</li>
+              </ul>
+            </article>
+
+            <article class="service-card">
+              <div class="card-kicker">Identification</div>
+              <h3 class="card-title">Get the Part Right First</h3>
+              <p class="card-copy">Engine tags, serial numbers, clear photos, and application details prevent expensive guessing.</p>
+              <ul class="card-list">
+                <li>Engine make, model, serial number, and horsepower</li>
+                <li>Component photos from multiple angles</li>
+                <li>Failure symptoms and reason for replacement</li>
+              </ul>
+            </article>
+
+            <article class="service-card">
+              <div class="card-kicker">Options</div>
+              <h3 class="card-title">Repair, OEM, or Aftermarket</h3>
+              <p class="card-copy">The best solution may be a direct replacement, a practical aftermarket option, a repair, or a fabricated improvement.</p>
+              <ul class="card-list">
+                <li>Compare available replacement paths</li>
+                <li>Confirm fitment before ordering</li>
+                <li>Coordinate with engine service or fabrication when needed</li>
+              </ul>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <div class="media-grid">
-          <article class="gallery-card tall">
-            <img src="./assets/projects/team-john-deere-engine.png" alt="Team with a marine engine" />
-            <div class="gallery-copy">
-              <h3>Real equipment context</h3>
-              <p>Use real equipment context instead of decorative catalog filler.</p>
+      <section class="page-section muted-block">
+        <div class="container split">
+          <article class="copy-card">
+            <div class="section-kicker">What to Send</div>
+            <h2 class="section-title">A parts request someone can act on</h2>
+            <ul class="request-list">
+              <li>Engine make, model, serial number, horsepower, and vessel application</li>
+              <li>Part number, casting number, or component name if known</li>
+              <li>Clear photos of the engine tag and the component from multiple angles</li>
+              <li>Whether an OEM part is required or a proven aftermarket option is acceptable</li>
+              <li>Required timeline, vessel location, and whether the boat is currently down</li>
+            </ul>
+          </article>
+
+          <article class="panel dark">
+            <div class="card-kicker">More Than a Parts Counter</div>
+            <h3 class="card-title">When the failed part points to a larger problem</h3>
+            <p class="card-copy">
+              If the root failure is still unclear, the engine service process comes first. If the original design or mounting arrangement is the problem, custom fabrication may be the better answer.
+            </p>
+            <div class="inline-actions">
+              <a class="btn" href="./engine-services.html">Engine Services</a>
+              <a class="btn-secondary" href="./marine-fabrication.html">Marine Fabrication</a>
             </div>
           </article>
-          <div class="gallery-stack">
-            <article class="service-card">
-              <div class="card-kicker">Fix the page behavior</div>
-              <h3 class="card-title">Keep this page honest</h3>
-              <p class="card-copy">
-                If you later want a real catalog, build it from actual data. Until then, this page should stay focused on intake, identification, and next steps.
-              </p>
-            </article>
-            <article class="service-card">
-              <div class="card-kicker">Next step</div>
-              <h3 class="card-title">Wire the request form later</h3>
-              <p class="card-copy">
-                Once you know where submissions should go, hook the request form to email, a CRM, or Vercel serverless handling. The structure is already there on the home page.
-              </p>
-              <div class="inline-actions">
-                <a class="btn" href="./index.html#request">Open request form</a>
-              </div>
-            </article>
+        </div>
+      </section>
+
+      <section id="parts-gallery" class="page-section">
+        <div class="container">
+          <div class="section-intro">
+            <div class="section-kicker">Parts Inventory</div>
+            <h2 class="section-title">Parts, kits, and components ready for the real work</h2>
+            <p class="section-copy">
+              Gaskets, service kits, engine components, filters, hard parts, and legacy inventory are part of the sourcing network behind every search.
+            </p>
+          </div>
+
+          <div class="photo-grid photo-grid-3 parts-gallery">
+            <figure class="project-photo project-photo-wide">
+              <img
+                src="./assets/mde/parts-caterpillar-gaskets.jpg"
+                alt="Caterpillar gasket and seal inventory organized on a workbench"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Caterpillar gaskets and seals</figcaption>
+            </figure>
+            <figure class="project-photo">
+              <img
+                src="./assets/mde/parts-caterpillar-gasket-kits.jpg"
+                alt="Caterpillar engine gasket kits and packaged service parts"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Packaged service kits</figcaption>
+            </figure>
+            <figure class="project-photo">
+              <img
+                src="./assets/mde/parts-inventory-shelf.jpg"
+                alt="Shelves of marine diesel engine components and turbochargers"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Engine components</figcaption>
+            </figure>
+            <figure class="project-photo">
+              <img
+                src="./assets/mde/parts-engine-gasket-stock.jpg"
+                alt="Large engine head gasket and rebuild components"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Rebuild inventory</figcaption>
+            </figure>
+            <figure class="project-photo">
+              <img
+                src="./assets/mde/parts-hose-and-component-stock.jpg"
+                alt="Stored marine hoses and engine components"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Hoses and components</figcaption>
+            </figure>
+            <figure class="project-photo project-photo-wide">
+              <img
+                src="./assets/mde/parts-crankshaft-inventory.jpg"
+                alt="Crankshafts, connecting rods, and hard engine parts in stock"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Hard engine parts</figcaption>
+            </figure>
+            <figure class="project-photo">
+              <img
+                src="./assets/mde/parts-storage-bins.jpg"
+                alt="Organized bins of marine engine parts and supplies"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Organized parts storage</figcaption>
+            </figure>
+            <figure class="project-photo">
+              <img
+                src="./assets/mde/parts-filters-and-supplies.jpg"
+                alt="Filters and packaged marine service supplies"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Filters and service supplies</figcaption>
+            </figure>
+            <figure class="project-photo">
+              <img
+                src="./assets/mde/parts-engine-components-shelf.jpg"
+                alt="Shelf of marine diesel pumps and engine components"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Pumps and engine components</figcaption>
+            </figure>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section class="contact-strip" aria-label="Contact information">
+        <div class="container contact-grid">
+          <div class="contact-item">
+            <strong>Phone</strong>
+            <a data-bind="contact.phone" data-bind-tel="contact.phone" href="tel:+12522561783">(252) 256-1783</a>
+          </div>
+          <div class="contact-item">
+            <strong>Email</strong>
+            <a data-bind="contact.email" data-bind-mailto="contact.email" href="mailto:mdemarineobx@gmail.com">mdemarineobx@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <strong>Location</strong>
+            <span data-bind="contact.serviceArea">Manns Harbor, North Carolina</span>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="footer-inner">
-        <div>© 2026 <span data-bind="brand.name">MDEmarine</span>. Parts sourcing, intake cleanup, and repair planning.</div>
+        <div>&copy; 2026 <span data-bind="brand.name">MDE Marine</span>. Marine diesel parts identification and sourcing.</div>
         <div class="footer-links">
           <a href="./index.html">Home</a>
           <a href="./engine-services.html">Engine Services</a>
+          <a href="./engine-repower.html">Engine Repower</a>
           <a href="./marine-fabrication.html">Marine Fabrication</a>
           <a href="./owner.html" class="footer-owner">Owner</a>
         </div>

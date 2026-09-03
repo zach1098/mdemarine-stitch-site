@@ -199,7 +199,7 @@ module.exports = async function handler(req, res) {
           headline: draft.home && draft.home.headline,
           subhead: draft.home && draft.home.subhead,
           services: draft.home && draft.home.services,
-          request: draft.home && draft.home.request,
+          contact: draft.home && draft.home.contact,
           gallery: draft.home && draft.home.gallery
         }
       },

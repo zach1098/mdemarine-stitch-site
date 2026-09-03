@@ -3,30 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MDEmarine | Marine Engine Support, Fabrication, and Parts</title>
+    <title>MDE Marine | Diesel Engine Service, Repowers, Fabrication, and Parts</title>
     <meta
       name="description"
-      content="Marine engine support, repower planning, fabrication, and parts sourcing for engine change-outs, troubleshooting, and project execution."
+      content="MDE Marine provides marine diesel diagnostics, repairs, engine repowers, custom fabrication, and parts sourcing from Manns Harbor, North Carolina."
     />
     <meta
       name="keywords"
-      content="marine engine support, repower planning, marine fabrication, marine engine parts, engine change out, marine diagnostics"
+      content="marine diesel repair, engine repower, marine fabrication, heat exchangers, transmission cooler mounts, marine engine parts, Manns Harbor NC"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="MDEmarine | Marine Engine Support, Fabrication, and Parts" />
+    <meta property="og:title" content="MDE Marine | Diesel Engine Service, Repowers, Fabrication, and Parts" />
     <meta
       property="og:description"
-      content="Marine engine support, repower planning, fabrication, and parts sourcing for engine change-outs, troubleshooting, and project execution."
+      content="Marine diesel diagnostics, repairs, repowers, custom fabrication, and parts sourcing from Manns Harbor, North Carolina."
     />
     <meta property="og:url" content="https://mdemarine-stitch-site.vercel.app/" />
-    <meta property="og:image" content="https://mdemarine-stitch-site.vercel.app/assets/projects/team-john-deere-engine.png" />
+    <meta property="og:image" content="https://mdemarine-stitch-site.vercel.app/assets/mde/home-boat-yard.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MDEmarine | Marine Engine Support, Fabrication, and Parts" />
+    <meta name="twitter:title" content="MDE Marine | Diesel Engine Service, Repowers, Fabrication, and Parts" />
     <meta
       name="twitter:description"
-      content="Marine engine support, repower planning, fabrication, and parts sourcing for engine change-outs, troubleshooting, and project execution."
+      content="Marine diesel diagnostics, repairs, repowers, custom fabrication, and parts sourcing from Manns Harbor, North Carolina."
     />
-    <meta name="twitter:image" content="https://mdemarine-stitch-site.vercel.app/assets/projects/team-john-deere-engine.png" />
+    <meta name="twitter:image" content="https://mdemarine-stitch-site.vercel.app/assets/mde/home-boat-yard.jpg" />
     <link rel="canonical" href="https://mdemarine-stitch-site.vercel.app/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,239 +36,251 @@
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body data-page="home">
     <div class="site-shell">
       <header class="nav">
         <div class="nav-inner">
-          <a class="brand" href="./index.html" data-bind="brand.name">MDEmarine</a>
-          <nav class="nav-links">
+          <a class="brand" href="./index.html" data-bind="brand.name">MDE Marine</a>
+          <nav class="nav-links" aria-label="Primary navigation">
             <a class="active" href="./index.html">Home</a>
             <a href="./engine-services.html">Engine Services</a>
+            <a href="./engine-repower.html">Engine Repower</a>
             <a href="./marine-fabrication.html">Marine Fabrication</a>
             <a href="./parts-sales.html">Parts &amp; Sales</a>
-            <a href="#request">Request</a>
           </nav>
-          <a class="nav-cta" href="#request">Start Request</a>
+          <a class="nav-cta" data-bind-tel="contact.phone" href="tel:+12522561783">Call Now</a>
         </div>
       </header>
 
-      <section class="hero">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <div class="eyebrow" data-bind="home.eyebrow">Marine Engine Support</div>
-            <h1 data-bind="home.headline">Engine change-outs, diagnostics, fabrication, and project support</h1>
-            <p data-bind="home.subhead">
-              Marine engine support, fabrication, and parts sourcing for owners, captains, and yards that need a cleaner path from first inquiry to real project scope.
-            </p>
-            <div class="hero-actions">
-              <a class="btn" href="#services">View Services</a>
-              <a class="btn-secondary" href="#request">Request Service</a>
-            </div>
-          </div>
-
-          <div class="hero-panel">
-            <div class="info-card">
-              <div class="info-label" data-bind="home.stats.0.label">Best Fit</div>
-              <div class="info-value" data-bind="home.stats.0.value">Repower Planning</div>
-            </div>
-            <div class="info-card">
-              <div class="info-label" data-bind="home.stats.1.label">Problem Calls</div>
-              <div class="info-value" data-bind="home.stats.1.value">Heat, Smoke, Vibration</div>
-            </div>
-            <div class="info-card">
-              <div class="info-label" data-bind="home.stats.2.label">Project Scope</div>
-              <div class="info-value" data-bind="home.stats.2.value">Dockside and Yard Work</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" class="page-section">
-        <div class="container">
-          <div class="section-intro">
-            <div class="section-kicker">Core Pages</div>
-            <h2 class="section-title">The missing files are real service pages now</h2>
-            <p class="section-copy">
-              Each section focuses on the actual work, what information should come in with the request, and where customers should go next instead of burying everything in one oversized page.
-            </p>
-          </div>
-
-          <div class="grid grid-3">
-            <article class="service-card">
-              <div class="card-kicker" data-bind="home.services.0.kicker">01</div>
-              <h3 class="card-title" data-bind="home.services.0.title">Engine services</h3>
-              <p class="card-copy" data-bind="home.services.0.copy">
-                Engine change-outs, repower planning, troubleshooting, and mechanical support for projects that need more than generic boilerplate.
+      <main>
+        <section class="hero">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <div class="eyebrow" data-bind="home.eyebrow">Marine Diesel Specialists</div>
+              <h1 data-bind="home.headline">Engine repowers, diagnostics, fabrication, and project support</h1>
+              <p data-bind="home.subhead">
+                Practical marine diesel support for owners, captains, and boat yards—from troubleshooting and repairs to complete repower planning, custom fabrication, and hard-to-source parts.
               </p>
-              <ul class="card-list" data-bind-list="home.services.0.list">
-                <li>Change-out planning and removal scope</li>
-                <li>Overheat, no-start, smoke, and vibration diagnosis</li>
-                <li>Job scoping before the yard clock starts burning</li>
-              </ul>
-              <div class="inline-actions">
-                <a class="btn" data-bind-href="home.services.0.href" href="./engine-services.html">Open page</a>
+              <div class="hero-actions">
+                <a class="btn" href="#services">View Services</a>
+                <a class="btn-secondary" data-bind-mailto="contact.email" href="mailto:mdemarineobx@gmail.com">Email MDE Marine</a>
               </div>
-            </article>
+            </div>
 
-            <article class="service-card">
-              <div class="card-kicker" data-bind="home.services.1.kicker">02</div>
-              <h3 class="card-title" data-bind="home.services.1.title">Marine fabrication</h3>
-              <p class="card-copy" data-bind="home.services.1.copy">
-                Fabrication support for mounts, brackets, polished tubing, install cleanup, and the small metalwork jobs that always appear once a project opens up.
+            <div class="hero-panel" aria-label="Service highlights">
+              <div class="info-card">
+                <div class="info-label" data-bind="home.stats.0.label">Core Service</div>
+                <div class="info-value" data-bind="home.stats.0.value">Engine Repowers</div>
+              </div>
+              <div class="info-card">
+                <div class="info-label" data-bind="home.stats.1.label">Engine Support</div>
+                <div class="info-value" data-bind="home.stats.1.value">Diagnostics &amp; Repair</div>
+              </div>
+              <div class="info-card">
+                <div class="info-label" data-bind="home.stats.2.label">Location</div>
+                <div class="info-value" data-bind="home.stats.2.value">Manns Harbor, NC</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" class="page-section">
+          <div class="container">
+            <div class="section-intro">
+              <div class="section-kicker">What We Do</div>
+              <h2 class="section-title">Marine diesel expertise from diagnosis to repower</h2>
+              <p class="section-copy">
+                MDE Marine combines hands-on mechanical experience, custom fabrication, and long-standing supplier relationships to keep complex projects moving.
               </p>
-              <ul class="card-list" data-bind-list="home.services.1.list">
-                <li>Mounts, brackets, trays, and repair parts</li>
-                <li>Aluminum and stainless detail work</li>
-                <li>Real project photo gallery from the export</li>
-              </ul>
-              <div class="inline-actions">
-                <a class="btn" data-bind-href="home.services.1.href" href="./marine-fabrication.html">Open page</a>
-              </div>
-            </article>
-
-            <article class="service-card dark">
-              <div class="card-kicker" data-bind="home.services.2.kicker">03</div>
-              <h3 class="card-title" data-bind="home.services.2.title">Parts and sales</h3>
-              <p class="card-copy" data-bind="home.services.2.copy">
-                Parts sourcing and repair planning language that helps people explain what they need before they waste money ordering the wrong thing.
-              </p>
-              <ul class="card-list" data-bind-list="home.services.2.list">
-                <li>Identify the failed part first</li>
-                <li>Separate urgent needs from planned work</li>
-                <li>Capture engine model, serial, and photos up front</li>
-              </ul>
-              <div class="inline-actions">
-                <a class="btn" data-bind-href="home.services.2.href" href="./parts-sales.html">Open page</a>
-              </div>
-            </article>
-          </div>
-
-          <div class="stat-strip">
-            <div class="stat-card">
-              <div class="big-number">Engine</div>
-              <div class="stat-label">Planning and diagnosis</div>
             </div>
-            <div class="stat-card">
-              <div class="big-number">Fab</div>
-              <div class="stat-label">Repair and support work</div>
-            </div>
-            <div class="stat-card">
-              <div class="big-number">Parts</div>
-              <div class="stat-label">Sourcing and intake</div>
-            </div>
-            <div class="stat-card">
-              <div class="big-number">Request</div>
-              <div class="stat-label">Clearer first contact</div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="page-section muted-block">
-        <div class="container">
-          <div class="section-intro">
-            <div class="section-kicker" data-bind="home.gallery.kicker">Project gallery</div>
-            <h2 class="section-title" data-bind="home.gallery.title">Real photos from the missing export</h2>
-            <p class="section-copy" data-bind="home.gallery.copy">
-              Real project imagery helps the site feel grounded and gives the fabrication and engine sections something specific to show.
-            </p>
-          </div>
-
-          <div class="media-grid">
-            <article class="gallery-card tall">
-              <img data-bind="home.gallery.items.0.image" src="./assets/projects/team-john-deere-engine.png" alt="Team standing beside a John Deere marine engine" />
-              <div class="gallery-copy">
-                <h3 data-bind="home.gallery.items.0.title">Shop and project credibility</h3>
-                <p data-bind="home.gallery.items.0.copy">Use this kind of image when you want the site to feel like an actual operation instead of a mockup.</p>
-              </div>
-            </article>
-            <div class="gallery-stack">
-              <article class="gallery-card">
-                <img data-bind="home.gallery.items.1.image" src="./assets/projects/fabrication-weld-detail.png" alt="Close-up of polished marine fabrication weld detail" />
-                <div class="gallery-copy">
-                  <h3 data-bind="home.gallery.items.1.title">Fabrication detail</h3>
-                  <p data-bind="home.gallery.items.1.copy">Polished tubing and weld work that looks like real shop output, because it is.</p>
+            <div class="grid grid-4">
+              <article class="service-card">
+                <div class="card-kicker" data-bind="home.services.0.kicker">01</div>
+                <h3 class="card-title" data-bind="home.services.0.title">Engine Services</h3>
+                <p class="card-copy" data-bind="home.services.0.copy">
+                  Diagnostics, troubleshooting, maintenance, component repair, and engine or transmission rebuild support.
+                </p>
+                <ul class="card-list" data-bind-list="home.services.0.list">
+                  <li>No-start, low-power, smoke, and overheating diagnostics</li>
+                  <li>Onboard component repair and replacement</li>
+                  <li>In-frame and out-of-frame rebuilds</li>
+                </ul>
+                <div class="inline-actions">
+                  <a class="btn" data-bind-href="home.services.0.href" href="./engine-services.html">Engine Services</a>
                 </div>
               </article>
-              <article class="gallery-card">
-                <img data-bind="home.gallery.items.2.image" src="./assets/projects/engine-install-detail.png" alt="Marine engine install detail with hoses and fittings" />
-                <div class="gallery-copy">
-                  <h3 data-bind="home.gallery.items.2.title">Mechanical install</h3>
-                  <p data-bind="home.gallery.items.2.copy">Engine room close-up that fits the engine services page better than another AI hero image.</p>
+
+              <article class="service-card dark">
+                <div class="card-kicker" data-bind="home.services.1.kicker">02</div>
+                <h3 class="card-title" data-bind="home.services.1.title">Engine Repower</h3>
+                <p class="card-copy" data-bind="home.services.1.copy">
+                  Repower planning, supplier coordination, 3D scanning, CAD layout, custom mounts, and installation integration.
+                </p>
+                <ul class="card-list" data-bind-list="home.services.1.list">
+                  <li>Pre-installation planning and fitment review</li>
+                  <li>Custom engine mount estimates</li>
+                  <li>Fabrication and vessel-system coordination</li>
+                </ul>
+                <div class="inline-actions">
+                  <a class="btn" data-bind-href="home.services.1.href" href="./engine-repower.html">Plan a Repower</a>
+                </div>
+              </article>
+
+              <article class="service-card">
+                <div class="card-kicker" data-bind="home.services.2.kicker">03</div>
+                <h3 class="card-title" data-bind="home.services.2.title">Marine Fabrication</h3>
+                <p class="card-copy" data-bind="home.services.2.copy">
+                  Custom heat exchangers, cooler mounting kits, engine mounts, brackets, repair parts, and anodized aluminum welding.
+                </p>
+                <ul class="card-list" data-bind-list="home.services.2.list">
+                  <li>Heat exchangers, mounts, brackets, and repair parts</li>
+                  <li>Transmission cooler mounting kits</li>
+                  <li>Anodized aluminum welding and reconstruction</li>
+                </ul>
+                <div class="inline-actions">
+                  <a class="btn" data-bind-href="home.services.2.href" href="./marine-fabrication.html">View Fabrication</a>
+                </div>
+              </article>
+
+              <article class="service-card">
+                <div class="card-kicker" data-bind="home.services.3.kicker">04</div>
+                <h3 class="card-title" data-bind="home.services.3.title">Parts &amp; Sales</h3>
+                <p class="card-copy" data-bind="home.services.3.copy">
+                  Accurate parts identification and sourcing backed by decades of marine diesel supplier relationships.
+                </p>
+                <ul class="card-list" data-bind-list="home.services.3.list">
+                  <li>45 years of parts and supplier relationships</li>
+                  <li>Support for Caterpillar, Cummins, Detroit, and more</li>
+                  <li>OEM and practical aftermarket options</li>
+                </ul>
+                <div class="inline-actions">
+                  <a class="btn" data-bind-href="home.services.3.href" href="./parts-sales.html">Find Parts</a>
                 </div>
               </article>
             </div>
+
+            <div class="stat-strip">
+              <div class="stat-card">
+                <div class="big-number">Diagnose</div>
+                <div class="stat-label">Find the actual failure</div>
+              </div>
+              <div class="stat-card">
+                <div class="big-number">Repair</div>
+                <div class="stat-label">Restore dependable operation</div>
+              </div>
+              <div class="stat-card">
+                <div class="big-number">Repower</div>
+                <div class="stat-label">Plan the complete integration</div>
+              </div>
+              <div class="stat-card">
+                <div class="big-number">Fabricate</div>
+                <div class="stat-label">Solve fitment and failure points</div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="request" class="page-section">
-        <div class="container request-grid">
-          <article class="copy-card">
-            <div class="section-kicker" data-bind="home.request.kicker">Request checklist</div>
-            <h2 class="section-title" data-bind="home.request.title">What to send before asking for a quote</h2>
-            <ul class="request-list" data-bind-list="home.request.checklist">
-              <li>Vessel make, model, length, and where it is located</li>
-              <li>Engine brand, model, horsepower, and serial if available</li>
-              <li>Whether the job is a failure diagnosis, planned repower, or fabrication request</li>
-              <li>Photos of the engine space, access path, damaged parts, alarms, or current install</li>
-              <li>How soon the work needs to happen, especially if haul-out or crane time is involved</li>
-            </ul>
-            <p class="helper" data-bind="home.request.helper">
-              The form below is still static. Hook it to email, a CRM, or Vercel Forms later. For now it gives the page the right structure.
-            </p>
-          </article>
+        <section class="page-section muted-block">
+          <div class="container">
+            <div class="section-intro">
+              <div class="section-kicker" data-bind="home.gallery.kicker">From the Shop</div>
+              <h2 class="section-title" data-bind="home.gallery.title">Real work, real equipment, real boat-yard experience</h2>
+              <p class="section-copy" data-bind="home.gallery.copy">
+                MDE Marine supports projects in the shop, aboard the vessel, and alongside the boat yard from Manns Harbor, North Carolina.
+              </p>
+            </div>
 
-          <article class="request-card">
-            <div class="section-kicker">Service request</div>
-            <div class="form-grid">
-              <div class="field">
-                <label for="name">Name</label>
-                <input id="name" type="text" placeholder="Your name" />
-              </div>
-              <div class="field">
-                <label for="phone">Phone</label>
-                <input id="phone" type="tel" placeholder="Best callback number" />
-              </div>
-              <div class="field field-full">
-                <label for="email">Email</label>
-                <input id="email" type="email" placeholder="you@example.com" />
-              </div>
-              <div class="field field-full">
-                <label for="vessel">Vessel / engine details</label>
-                <input id="vessel" type="text" placeholder="Vessel, engine brand, model, and work type" />
-              </div>
-              <div class="field field-full">
-                <label for="location">Location / timeline</label>
-                <input id="location" type="text" placeholder="Where the boat is and when the work is needed" />
-              </div>
-              <div class="field field-full">
-                <label for="details">Project details</label>
-                <textarea id="details" placeholder="Describe symptoms, planned scope, or what parts and fabrication are needed"></textarea>
+            <div class="media-grid">
+              <article class="gallery-card tall">
+                <img
+                  data-bind="home.gallery.items.0.image"
+                  src="./assets/mde/home-boat-yard.jpg"
+                  alt="Vessel suspended in a boat-yard travel lift"
+                  decoding="async"
+                />
+                <div class="gallery-copy">
+                  <h3 data-bind="home.gallery.items.0.title">Boat-yard coordination</h3>
+                  <p data-bind="home.gallery.items.0.copy">Project support that accounts for access, scheduling, lifting, fabrication, and the work around the engine.</p>
+                </div>
+              </article>
+              <div class="gallery-stack">
+                <article class="gallery-card">
+                  <img
+                    data-bind="home.gallery.items.1.image"
+                    src="./assets/mde/home-engine-work.jpg"
+                    alt="Technicians working on a marine diesel engine aboard a vessel"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="gallery-copy">
+                    <h3 data-bind="home.gallery.items.1.title">Hands-on engine work</h3>
+                    <p data-bind="home.gallery.items.1.copy">Diagnostics and repairs performed where the problem actually lives.</p>
+                  </div>
+                </article>
+                <article class="gallery-card">
+                  <img
+                    data-bind="home.gallery.items.2.image"
+                    src="./assets/mde/home-shop-dogs.jpg"
+                    alt="MDE Marine shop dogs on the shop floor"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div class="gallery-copy">
+                    <h3 data-bind="home.gallery.items.2.title">Part of the crew</h3>
+                    <p data-bind="home.gallery.items.2.copy">The shop team includes two very committed floor supervisors.</p>
+                  </div>
+                </article>
               </div>
             </div>
-            <div class="inline-actions">
-              <a class="btn" href="./engine-services.html">Review engine page</a>
-              <a class="btn-secondary" href="./marine-fabrication.html">Review fabrication page</a>
-            </div>
-          </article>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <section class="contact-strip">
-        <div class="container contact-grid">
-          <div class="contact-item"><strong>Phone:</strong> <span data-bind="contact.phone">(910) 555-0188</span></div>
-          <div class="contact-item"><strong>Email:</strong> <span data-bind="contact.email">service@mdemarine.com</span></div>
-          <div class="contact-item"><strong>Area:</strong> <span data-bind="contact.serviceArea">Carolinas + Southeast</span></div>
-        </div>
-      </section>
+        <section id="contact" class="page-section contact-section">
+          <div class="container contact-cta">
+            <div>
+              <div class="section-kicker section-kicker-light" data-bind="home.contact.kicker">Talk Through the Job</div>
+              <h2 class="section-title section-title-light" data-bind="home.contact.title">Call or email MDE Marine directly</h2>
+              <p class="section-copy section-copy-light" data-bind="home.contact.copy">
+                Have the vessel location, engine make and model, serial number, photos, and a short description of the issue ready when possible.
+              </p>
+            </div>
+            <div class="contact-actions">
+              <a class="btn" data-bind-tel="contact.phone" href="tel:+12522561783">
+                Call <span data-bind="contact.phone">(252) 256-1783</span>
+              </a>
+              <a class="btn-secondary" data-bind-mailto="contact.email" href="mailto:mdemarineobx@gmail.com">
+                <span data-bind="contact.email">mdemarineobx@gmail.com</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact-strip" aria-label="Contact information">
+          <div class="container contact-grid">
+            <div class="contact-item">
+              <strong>Phone</strong>
+              <a data-bind="contact.phone" data-bind-tel="contact.phone" href="tel:+12522561783">(252) 256-1783</a>
+            </div>
+            <div class="contact-item">
+              <strong>Email</strong>
+              <a data-bind="contact.email" data-bind-mailto="contact.email" href="mailto:mdemarineobx@gmail.com">mdemarineobx@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <strong>Location</strong>
+              <span data-bind="contact.serviceArea">Manns Harbor, North Carolina</span>
+            </div>
+          </div>
+        </section>
+      </main>
 
       <footer class="footer">
         <div class="footer-inner">
-          <div>© 2026 <span data-bind="brand.name">MDEmarine</span>. Marine engine support, fabrication, and parts sourcing.</div>
+          <div>&copy; 2026 <span data-bind="brand.name">MDE Marine</span>. Marine diesel service, repowers, fabrication, and parts.</div>
           <div class="footer-links">
             <a href="./index.html">Home</a>
             <a href="./engine-services.html">Engine Services</a>
+            <a href="./engine-repower.html">Engine Repower</a>
             <a href="./marine-fabrication.html">Marine Fabrication</a>
             <a href="./parts-sales.html">Parts &amp; Sales</a>
             <a href="./owner.html" class="footer-owner">Owner</a>

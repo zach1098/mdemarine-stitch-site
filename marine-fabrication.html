@@ -3,27 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MDEmarine | Marine Fabrication</title>
+    <title>Custom Marine Heat Exchangers and Fabrication | MDE Marine</title>
     <meta
       name="description"
-      content="Marine fabrication support for polished tubing, brackets, mounts, repair parts, and installation support tied to engine and repower work."
+      content="Custom titanium plate heat exchangers, transmission cooler mounting kits, engine mounts, brackets, anodized aluminum welding, and marine fabrication."
     />
-    <meta name="keywords" content="marine fabrication, polished tubing, marine brackets, marine mounts, marine welding" />
+    <meta
+      name="keywords"
+      content="marine heat exchanger, titanium plate heat exchanger, transmission cooler mount, Scania cooler mount, Caterpillar cooler mount, marine fabrication, anodized aluminum welding"
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="MDEmarine | Marine Fabrication" />
+    <meta property="og:title" content="Custom Marine Heat Exchangers and Fabrication | MDE Marine" />
     <meta
       property="og:description"
-      content="Marine fabrication support for polished tubing, brackets, mounts, repair parts, and installation support tied to engine and repower work."
+      content="Custom titanium plate heat exchangers, transmission cooler mounting kits, engine mounts, brackets, welding, and marine fabrication."
     />
     <meta property="og:url" content="https://mdemarine-stitch-site.vercel.app/marine-fabrication.html" />
-    <meta property="og:image" content="https://mdemarine-stitch-site.vercel.app/assets/projects/fabrication-weld-detail.png" />
+    <meta property="og:image" content="https://mdemarine-stitch-site.vercel.app/assets/mde/fabrication-cooler-mount-kits.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MDEmarine | Marine Fabrication" />
+    <meta name="twitter:title" content="Custom Marine Heat Exchangers and Fabrication | MDE Marine" />
     <meta
       name="twitter:description"
-      content="Marine fabrication support for polished tubing, brackets, mounts, repair parts, and installation support tied to engine and repower work."
+      content="Custom titanium plate heat exchangers, transmission cooler mounting kits, engine mounts, brackets, welding, and marine fabrication."
     />
-    <meta name="twitter:image" content="https://mdemarine-stitch-site.vercel.app/assets/projects/fabrication-weld-detail.png" />
+    <meta name="twitter:image" content="https://mdemarine-stitch-site.vercel.app/assets/mde/fabrication-cooler-mount-kits.jpg" />
     <link rel="canonical" href="https://mdemarine-stitch-site.vercel.app/marine-fabrication.html" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,157 +36,283 @@
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body data-page="marine-fabrication">
     <header class="nav">
       <div class="nav-inner">
-        <a class="brand" href="./index.html" data-bind="brand.name">MDEmarine</a>
-        <nav class="nav-links">
+        <a class="brand" href="./index.html" data-bind="brand.name">MDE Marine</a>
+        <nav class="nav-links" aria-label="Primary navigation">
           <a href="./index.html">Home</a>
           <a href="./engine-services.html">Engine Services</a>
+          <a href="./engine-repower.html">Engine Repower</a>
           <a class="active" href="./marine-fabrication.html">Marine Fabrication</a>
           <a href="./parts-sales.html">Parts &amp; Sales</a>
-          <a href="./index.html#request">Request</a>
         </nav>
-        <a class="nav-cta" href="./index.html#request">Start Request</a>
+        <a class="nav-cta" data-bind-tel="contact.phone" href="tel:+12522561783">Call Now</a>
       </div>
     </header>
 
-    <section class="page-hero">
-      <div class="page-hero-grid">
-        <div>
-          <div class="eyebrow">Marine Fabrication</div>
-          <h1>Polished tubing, repair parts, mounts, and install support</h1>
-          <p>
-            Use this page for polished tubing, support metalwork, and the fabrication scope that often comes with engine and repower jobs.
-          </p>
-          <div class="hero-actions">
-            <a class="btn" href="./index.html#request">Request fabrication</a>
-            <a class="btn-secondary" href="./engine-services.html">Back to engine work</a>
+    <main>
+      <section class="page-hero page-hero--wide-title">
+        <div class="page-hero-grid">
+          <div>
+            <div class="eyebrow">Marine Fabrication</div>
+            <h1>Custom heat exchangers, engine mounts, transmission cooler mounting kits, and custom fabrication</h1>
+            <p>
+              MDE Marine reengineers known marine-system failure points and builds practical parts that are serviceable, secure, and designed around the actual installation.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" data-bind-tel="contact.phone" href="tel:+12522561783">Call About Fabrication</a>
+              <a class="btn-secondary" data-bind-mailto="contact.email" href="mailto:mdemarineobx@gmail.com">Email Photos &amp; Details</a>
+            </div>
+          </div>
+          <div class="page-hero-media">
+            <img
+              src="./assets/mde/fabrication-cooler-mount-kits.jpg"
+              alt="Custom marine transmission cooler mounts and mounting hardware"
+              decoding="async"
+            />
           </div>
         </div>
-        <div class="page-hero-media">
-          <img src="./assets/projects/fabrication-weld-detail.png" alt="Close-up of polished marine fabrication weld detail" />
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="page-section">
-      <div class="container">
-        <div class="section-intro">
-          <div class="section-kicker">What belongs here</div>
-          <h2 class="section-title">Fabrication that supports the project, not fluff that wastes space</h2>
-          <p class="section-copy">
-            Keep this section focused on the kind of metalwork offered, where it fits in the broader project, and the real examples that support it.
-          </p>
-        </div>
-
-        <div class="grid grid-3">
-          <article class="service-card">
-            <div class="card-kicker">Metalwork</div>
-            <h3 class="card-title">Polished tubing and detail work</h3>
-            <p class="card-copy">Use this when the job needs finished-looking marine fabrication, not just rough structural steel language.</p>
-            <ul class="card-list">
-              <li>Tube assemblies and polished connections</li>
-              <li>Finish-sensitive visible hardware</li>
-              <li>Repair or replacement of damaged fabricated pieces</li>
-            </ul>
-          </article>
-
-          <article class="service-card">
-            <div class="card-kicker">Support work</div>
-            <h3 class="card-title">Mounts, brackets, and one-offs</h3>
-            <p class="card-copy">This is the category that matters on repowers and engine jobs, because custom support pieces always show up once the old equipment comes out.</p>
-            <ul class="card-list">
-              <li>Engine-adjacent metalwork</li>
-              <li>Custom support hardware and cleanup fabrication</li>
-              <li>Install modifications driven by real fitment issues</li>
-            </ul>
-          </article>
-
-          <article class="service-card dark">
-            <div class="card-kicker">Project fit</div>
-            <h3 class="card-title">Best used with the other pages</h3>
-            <p class="card-copy">This should not live as a disconnected portfolio page. It should support the engine and parts pages with a clear cross-link path.</p>
-            <ul class="card-list">
-              <li>Repower jobs that need metalwork revisions</li>
-              <li>Engine-room upgrades or cleanup scope</li>
-              <li>Replacement parts that require fitted fabrication to install properly</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-section muted-block">
-      <div class="container">
-        <div class="section-intro">
-          <div class="section-kicker">Gallery</div>
-          <h2 class="section-title">Use the real fabrication photos from the zip</h2>
-          <p class="section-copy">These make the page feel grounded and give visitors something real to react to.</p>
-        </div>
-
-        <div class="grid grid-3">
-          <article class="gallery-card">
-            <img src="./assets/projects/fabrication-weld-detail.png" alt="Polished marine fabrication weld detail" />
-            <div class="gallery-copy">
-              <h3>Weld detail</h3>
-              <p>Good for showing finish quality without overexplaining it.</p>
-            </div>
-          </article>
-          <article class="gallery-card">
-            <img src="./assets/projects/fabrication-weld-angle.png" alt="Angled polished welded tubing" />
-            <div class="gallery-copy">
-              <h3>Angle connection</h3>
-              <p>Another real close-up that says more than a paragraph of generic copy.</p>
-            </div>
-          </article>
-          <article class="gallery-card">
-            <img src="./assets/projects/fabrication-parts-bench.png" alt="Fabricated parts on a workbench" />
-            <div class="gallery-copy">
-              <h3>Bench work</h3>
-              <p>Supports the mounts, brackets, and one-off parts story.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-section">
-      <div class="container split">
-        <article class="copy-card">
-          <div class="section-kicker">What to collect</div>
-          <h2 class="section-title">Before someone asks for fabrication help</h2>
-          <ul class="request-list">
-            <li>Photos from multiple angles, especially if the fabricated piece needs to match an existing install</li>
-            <li>Dimensions, measurements, or even rough hand sketches if no drawing exists</li>
-            <li>Material preference if known, otherwise describe where the part lives and what it supports</li>
-            <li>Whether the part is cosmetic, structural, or tied to an engine installation</li>
-            <li>Whether the job is standalone or part of a larger engine or yard project</li>
-          </ul>
-        </article>
-
-        <article class="panel dark">
-          <div class="card-kicker">Cross-link</div>
-          <h3 class="card-title">Where this page hands off</h3>
-          <ul class="card-list">
-            <li>Back to engine services when the fabrication is part of a repower or removal plan</li>
-            <li>To parts and sales when a failed component needs to be sourced before the fabrication can be finalized</li>
-            <li>To the home request form when the visitor already has enough details to submit the project</li>
-          </ul>
-          <div class="inline-actions">
-            <a class="btn" href="./engine-services.html">Engine services</a>
-            <a class="btn-secondary" href="./parts-sales.html">Parts &amp; sales</a>
+      <section class="page-section">
+        <div class="container">
+          <div class="section-intro">
+            <div class="section-kicker">Built to Solve the Weak Point</div>
+            <h2 class="section-title">Fabrication driven by fitment, serviceability, and reliability</h2>
+            <p class="section-copy">
+              The best custom work solves a specific problem. MDE Marine combines machining, welding, practical installation knowledge, and repeatable mounting designs to improve difficult OEM arrangements.
+            </p>
           </div>
-        </article>
-      </div>
-    </section>
+
+          <div class="grid grid-3">
+            <article class="service-card featured-card">
+              <div class="card-kicker">Improved Systems</div>
+              <h3 class="card-title">Improved Heat Exchanger and Cooler Designs</h3>
+              <p class="card-copy">Serviceable alternatives and stronger mounting solutions for known factory failure points.</p>
+              <ul class="card-list">
+                <li>Reengineered titanium plate heat exchangers and remanufactured OEM heat exchangers</li>
+                <li>Custom machining and refitting of accessory cooler mounts</li>
+              </ul>
+              <div class="inline-actions">
+                <a class="btn-danger" href="#product-details">Learn More</a>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="card-kicker">Support Work</div>
+              <h3 class="card-title">Mounts, Brackets, and Repair Parts</h3>
+              <p class="card-copy">Custom pieces for repowers, repairs, cooler relocation, engine-room changes, and damaged assemblies.</p>
+              <ul class="card-list">
+                <li>Engine and accessory mounting solutions</li>
+                <li>Custom brackets, supports, and one-off repair parts</li>
+                <li>Reconstruction of damaged material</li>
+              </ul>
+            </article>
+
+            <article class="service-card dark">
+              <div class="card-kicker">Metalwork</div>
+              <h3 class="card-title">Anodized Aluminum Welding</h3>
+              <p class="card-copy">Repair and custom welding for marine aluminum components where fit, finish, and corrosion resistance matter.</p>
+              <ul class="card-list">
+                <li>Repair of damaged fabricated assemblies</li>
+                <li>Custom modifications for engine and vessel systems</li>
+                <li>Machining and fitted fabrication support</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="product-details" class="page-section product-details">
+        <div class="container">
+          <div class="failure-note">
+            <div class="section-kicker section-kicker-danger">Why These Products Exist</div>
+            <h2>Known failure points deserve a better design</h2>
+            <p>
+              MDE Marine reengineers products with recurring factory failure points and offers practical, serviceable alternatives at a competitive price.
+            </p>
+          </div>
+
+          <div class="product-detail-grid">
+            <article class="detail-card detail-card-large">
+              <div class="detail-number">01</div>
+              <div>
+                <div class="card-kicker">Heat Exchangers</div>
+                <h3 class="card-title">A serviceable plate-style replacement</h3>
+                <p class="card-copy">
+                  Our plate-style heat exchanger replaces an expensive, unserviceable OEM tube-and-bundle unit with a lightweight aluminum front and rear plate surrounding a stack of titanium plates. The assembly is bolted together and sealed with replaceable rubber gaskets, allowing it to be disassembled, rebuilt, and serviced repeatedly instead of discarded.
+                </p>
+                <p class="card-copy">
+                  A weep hole on the saltwater side provides an early indication when a seal begins to fail and helps protect the aluminum plate from corrosion damage.
+                </p>
+              </div>
+            </article>
+
+            <article class="detail-card">
+              <div class="detail-number">02</div>
+              <div>
+                <div class="card-kicker">Scania + ZF</div>
+                <h3 class="card-title">800 HP transmission cooler mounting kit</h3>
+                <p class="card-copy">
+                  The OEM cooler arrangement for the 800 HP inline Scania engine and ZF transmission sits on a stand above the transmission and relies on hose clamps and thin rubber isolation. In observed applications, the cooler can begin wearing through the rubber in as little as 50 hours, eventually creating metal-on-metal contact and a preventable cooler failure.
+                </p>
+                <p class="card-copy">
+                  Our bolt-together kit retains the transmission-mounted plate while replacing the weak mounting arrangement with thicker, more rigid rubber isolation and a sturdy formed stainless-steel strap matched to the cooler diameter. The kit is designed for straightforward installation and can be installed by a capable owner or technician.
+                </p>
+              </div>
+            </article>
+
+            <article class="detail-card">
+              <div class="detail-number">03</div>
+              <div>
+                <div class="card-kicker">Caterpillar</div>
+                <h3 class="card-title">3406E, C12, C15, and C18 cooler mount replacement</h3>
+                <p class="card-copy">
+                  The factory one-piece steel band must be bent open to remove or install the cooler. After it is opened once or twice, the band can fatigue and break, leaving the cooler without a dependable restraint.
+                </p>
+                <p class="card-copy">
+                  Our aftermarket kit replaces that arrangement with thick, rigid rubber beneath the cooler and a formed band that secures it without repeatedly bending the mount. The result is a more practical, secure, and service-friendly installation.
+                </p>
+              </div>
+            </article>
+
+            <article class="detail-card">
+              <div class="detail-number">04</div>
+              <div>
+                <div class="card-kicker">Custom Work</div>
+                <h3 class="card-title">Mounts, brackets, and material reconstruction</h3>
+                <p class="card-copy">
+                  MDE Marine also designs and fabricates one-off mounts, brackets, repair parts, and reconstructed assemblies for damaged or poorly supported marine components.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="fabrication-gallery" class="page-section muted-block">
+        <div class="container">
+          <div class="section-intro">
+            <div class="section-kicker">Fabrication Gallery</div>
+            <h2 class="section-title">Custom mounts and engine-room solutions</h2>
+            <p class="section-copy">
+              Cooler mounts, brackets, plumbing, and installed hardware built around the equipment and the space available.
+            </p>
+          </div>
+
+          <div class="photo-grid photo-grid-3">
+            <figure class="project-photo">
+              <img
+                src="./assets/mde/fabrication-cooler-mount-pair.jpg"
+                alt="Pair of custom formed transmission cooler mounts"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Formed cooler mounts</figcaption>
+            </figure>
+            <figure class="project-photo project-photo-wide">
+              <img
+                src="./assets/mde/fabrication-engine-plumbing.jpg"
+                alt="Marine diesel engine with custom cooling and plumbing fabrication"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Engine plumbing integration</figcaption>
+            </figure>
+            <figure class="project-photo">
+              <img
+                src="./assets/mde/fabrication-transmission-cooler-mount.jpg"
+                alt="Custom transmission cooler mounting plate installed aboard a vessel"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Transmission cooler mount</figcaption>
+            </figure>
+            <figure class="project-photo project-photo-wide">
+              <img
+                src="./assets/mde/fabrication-cooler-mount-kits.jpg"
+                alt="Custom cooler assemblies with formed mounting bands"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Cooler mounting kits</figcaption>
+            </figure>
+            <figure class="project-photo">
+              <img
+                src="./assets/mde/fabrication-installed-cooler-bracket.jpg"
+                alt="Custom cooler bracket installed inside an engine room"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Installed cooler bracket</figcaption>
+            </figure>
+            <figure class="project-photo">
+              <img
+                src="./assets/mde/fabrication-engine-mount-detail.jpg"
+                alt="Custom engine mount installed beneath a marine diesel engine"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Engine mount detail</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="container split">
+          <article class="copy-card">
+            <div class="section-kicker">Before You Call</div>
+            <h2 class="section-title">Send enough detail to understand the fit</h2>
+            <ul class="request-list">
+              <li>Photos from multiple angles, including the surrounding equipment and access</li>
+              <li>Dimensions, measurements, drawings, or a rough hand sketch if no drawing exists</li>
+              <li>Engine, transmission, cooler, or component make and model information</li>
+              <li>Where the part lives, what it supports, and how the original failed</li>
+              <li>Whether the fabrication is standalone or part of a larger repair or repower</li>
+            </ul>
+          </article>
+
+          <article class="panel dark">
+            <div class="card-kicker">Related Work</div>
+            <h3 class="card-title">Fabrication belongs inside the complete project plan</h3>
+            <p class="card-copy">
+              Custom mounts and cooler solutions often connect directly to engine repair, parts sourcing, or a full repower installation.
+            </p>
+            <div class="inline-actions">
+              <a class="btn" href="./engine-repower.html">Engine Repowers</a>
+              <a class="btn-secondary" href="./engine-services.html">Engine Services</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact-strip" aria-label="Contact information">
+        <div class="container contact-grid">
+          <div class="contact-item">
+            <strong>Phone</strong>
+            <a data-bind="contact.phone" data-bind-tel="contact.phone" href="tel:+12522561783">(252) 256-1783</a>
+          </div>
+          <div class="contact-item">
+            <strong>Email</strong>
+            <a data-bind="contact.email" data-bind-mailto="contact.email" href="mailto:mdemarineobx@gmail.com">mdemarineobx@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <strong>Location</strong>
+            <span data-bind="contact.serviceArea">Manns Harbor, North Carolina</span>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
       <div class="footer-inner">
-        <div>© 2026 <span data-bind="brand.name">MDEmarine</span>. Marine fabrication, install support, and project metalwork.</div>
+        <div>&copy; 2026 <span data-bind="brand.name">MDE Marine</span>. Custom heat exchangers, mounts, and marine fabrication.</div>
         <div class="footer-links">
           <a href="./index.html">Home</a>
           <a href="./engine-services.html">Engine Services</a>
+          <a href="./engine-repower.html">Engine Repower</a>
           <a href="./parts-sales.html">Parts &amp; Sales</a>
           <a href="./owner.html" class="footer-owner">Owner</a>
         </div>
