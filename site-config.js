@@ -90,7 +90,7 @@
           list: [
             "45 years of parts and supplier relationships",
             "Support for Caterpillar, Cummins, Detroit, and more",
-            "OEM and practical aftermarket options"
+            "OEM parts and reengineered solutions"
           ],
           href: "./parts-sales.html"
         }
@@ -116,6 +116,11 @@
             image: "./assets/mde/home-shop-dogs.jpg",
             title: "Part of the crew",
             copy: "The shop team includes two very committed floor supervisors."
+          },
+          {
+            image: "./assets/mde/home-mde-product-showcase.jpg",
+            title: "Reengineered marine solutions",
+            copy: "A closer look at the heat exchangers and mounting solutions behind our fabrication work."
           }
         ]
       },
