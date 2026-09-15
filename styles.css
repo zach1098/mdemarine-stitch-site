@@ -789,8 +789,23 @@ textarea {
   object-fit: contain;
 }
 
-.project-photo--contain:hover img {
+.project-photo--contain:hover img,
+.project-photo--natural:hover img {
   transform: none;
+}
+
+/* Let the complete engine photo define its landscape frame, without letterboxing. */
+.project-photo--natural {
+  align-self: start;
+  min-height: 0;
+  border: 0;
+  background: transparent;
+}
+
+.project-photo--natural img {
+  height: auto;
+  min-height: 0;
+  aspect-ratio: auto;
 }
 
 /* Display the supplied landscape files upright without resampling the photos. */
@@ -803,6 +818,7 @@ textarea {
 }
 
 .photo-turn img,
+.detail-photo .photo-turn img,
 .project-photo:hover .photo-turn img {
   position: absolute;
   top: 50%;
@@ -852,6 +868,12 @@ textarea {
 
 .detail-photo-single {
   margin-top: 24px;
+}
+
+.detail-photo--portrait {
+  width: 100%;
+  max-width: 322px;
+  justify-self: center;
 }
 
 .detail-photo img {
